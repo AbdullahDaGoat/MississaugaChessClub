@@ -695,11 +695,10 @@ body{
 
 .announcement-grid {
   display: grid;
-  margin-top: -40rem;
+  margin-top: -42rem;
   align-items: center;
   height: 200%;
   width: 40%;
-  background-color: lightgrey;
 }
 
 #add-event-button {
@@ -749,7 +748,7 @@ body{
 .card {
   display: flex;
   flex-direction: column;
-  margin: 10px;
+  margin: 5px;
   padding: 10px;
   background-color: lightgrey;
 }
@@ -953,4 +952,61 @@ h5{
     object-fit: cover;
     object-position: center;
   }
+
+  .slider{
+    margin-left: 1rem;
+  }
+
+  .announcement-grid{
+    margin-top: 3rem;
+    margin-left: -50rem;
+    align-items: flex-start;
+    display: flex;
+    background-color: white;
+    white-space: nowrap;
+  }
+
+  #add-event-button {
+   display: none;
+  }
+  #event-form-container {
+    display: none;
+  }
+  
+  #submit{
+   display:  none;
+  }
+  
+  
+  .hidden {
+    display: none;
+  }
+  
+  .card {
+    margin-left: -42rem;
+    width: 100vw;
+    background-color: lightgrey;
+  }
+  
+  .card button {
+   width: 40%;
+  }
+  
+  .card h1{
+    text-align: center;
+    font-size: 25px;
+  } 
+  
+  .card h2{
+    font-size: 15px;
+  }
+  
+  .card p {
+    font-size: 12px;
+  }
+  
+  .events-name h1{
+   display: none;
+  }
+  
 }
