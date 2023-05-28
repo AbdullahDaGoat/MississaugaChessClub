@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
+html, body{
+  margin: 0;
+  padding: 0;
+}
+section {
+  display: grid;
+  grid-gap: 0;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "main main"
+    "event event";
+  margin-top: 100px;
+  background-image: url("../../assets/parties/IMG_6115.jpg");
+
+  /* Add the blur effect */
+  /* filter: blur(8px);
+  -webkit-filter: blur(8px); */
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+
+.events{
+  margin-top: 60px;
+  z-index: 100;
+  padding: 50px;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.3);
+}
+.title h1{
+  text-align: center;
+}
+@media (min-width: 1200px) {
+  section {
+    grid-template-areas:
+      "main event"
+      "main event";
+  }
+}
+
+
+.leftBox {
+  grid-area: main;
+  padding: 50px;
+  margin-top: 60px;
+  z-index: 100;
+}
+
+section .leftBox .content {
+  color: #fff;
+  background-color: #9c5200;
+  padding: 40px;
+  transition: 0.5s;
+  box-sizing: border-box;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.3);
+}
+
+section .leftBox .content:hover {
+  background-color: red;
+}
+
+section .leftBox .content h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 50px;
+  text-transform: uppercase;
+}
+
+section .leftBox .content p {
+  margin: 10px 0 0;
+  padding: 0;
+}
+
+
+section .events {
+  grid-area: event;
+  background-color: #9c5200;
+  box-sizing: border-box;
+}
+
+section .events ul {
+  margin: auto;
+  padding: 40px;
+  list-style: none;
+}
+
+section .events ul li {
+  background-color: #fff;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 30% 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 0;
+  grid-template-areas:
+    "time time"
+    "detail detail";
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  section .events ul li {
+    grid-template-areas:
+      "time detail"
+      "time detail";
+  }
+}
+
+section .events ul li .time {
+  grid-area: time;
+  position: relative;
+  padding: 8% 40%;
+  background-color: #b37b3c;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  transition: 0.5s;
+}
+
+section .events ul li:hover .time {
+  background-color: red;
+}
+
+section .events ul li .time h2 {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-size: 60px;
+  line-height: 30px;
+}
+
+section .events ul li .time h2 span {
+  font-size: 30px;
+}
+
+section .events ul li .details {
+  grid-area: detail;
+  padding: 20px 20px 32px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+section .events ul li .details h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 22px;
+}
+
+section .events ul li .details p {
+  margin: 10px 0 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+section .events ul li .details a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 15px;
+  border: 2px solid #b37b3c;
+  margin-top: 16px;
+  font-size: 18px;
+  transition: 0.5s;
+}
+
+section .events ul li .details a:hover {
+  background-color: red;
+  color: #fff;
+  border-color: red;
+}

@@ -78,10 +78,12 @@ slider.addEventListener("mouseout", () => {
   repeater();
 });
 
+
+
 const selectElement = (element) => document.querySelector(element);
-      selectElement('.menu-icons').addEventListener('click', () =>{
-          selectElement('nav').classList.toggle('active');
-      })
+selectElement('.menu-icons').addEventListener('click', () =>{
+          selectElement('nav').classList.toggle('active-nav');
+})
 
 
 // Get the navbar and banner elements
@@ -90,12 +92,12 @@ const header = document.querySelector('.header');
 const banner = document.querySelector('.banner');
 
 // Set the initial scroll position to the top of the page
-let prevScrollPos = window.pageYOffset;
+let prevScrollPos = window.scrollY;
 
 // Listen for the scroll event on the window object
 window.addEventListener('scroll', () => {
   // Get the current scroll position
-  const currentScrollPos = window.pageYOffset;
+  const currentScrollPos = window.srcollY;
 
   // Determine the scroll direction
   const isScrollingDown = currentScrollPos > prevScrollPos;
@@ -116,6 +118,25 @@ window.addEventListener('scroll', () => {
   // Update the previous scroll position
   prevScrollPos = currentScrollPos;
 });
+
+const modal = document.getElementById('modal');
+const closeButton = document.querySelector('[data-close-button]');
+
+function openModal() {
+  modal.classList.add('active-modal');
+  overlay.classList.add('active-modal');
+}
+
+function closeModal() {
+  modal.classList.remove('active-modal');
+  overlay.classList.remove('active-modal');
+}
+
+window.addEventListener('load', () => {
+  openModal();
+});
+
+closeButton.addEventListener('click', closeModal);
 
 
 const searchContainer = document.querySelector('.search-container');
@@ -148,14 +169,17 @@ window.addEventListener('load', () => {
   });
 });
 
-addEventButton.addEventListener('click', () => {
+
+addEventButton.addEventListener('click', (e) => {
   const password = prompt('Please enter password:');
-  if (password !== '123') {
+  const confirmPassword = config.passcode
+  if (password !== confirmPassword) {
     return;
   }
   eventFormContainer.classList.remove('hidden');
   addEventButton.classList.add('hidden');
 });
+
 
 eventForm.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -177,7 +201,8 @@ eventForm.addEventListener('submit', (e) => {
 announcementContainer.addEventListener('click', (e) => {
   if (e.target.classList.contains('delete-button')) {
     const password = prompt('Please enter password:');
-    if (password !== '123') {
+    const confirmPassword = config.passcode
+    if (password !== confirmPassword) {
       return;
     }
     const card = e.target.parentNode;

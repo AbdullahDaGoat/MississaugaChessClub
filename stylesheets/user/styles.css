@@ -6,10 +6,13 @@
   box-sizing: border-box;
 }
 
+
+
 body{
   height: 100vh;
   display: flex;
 }
+
 
 .slider{
   position: absolute;
@@ -82,6 +85,72 @@ body{
   background: #b37b3c;
   padding: 10px;
   cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 1000000000000;
+  background-color: white;
+  width: 500px;
+  max-width: 80%;
+}
+
+.modal.active-modal {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.modal-header .title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal-header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal-body {
+  padding: 10px 15px;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events: none;
+}
+
+#overlay.active-modal {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.popup-ul{
+  margin-left: 2rem;
+  list-style: disc;
 }
 
 .prev-btn{
@@ -210,7 +279,8 @@ body{
         }
         .nav-list{
             display: flex;
-            width: 100%;
+            width: 500%;
+            margin-left: 6rem;
         }
         .nav-list > li{
             line-height: 8rem;
@@ -296,8 +366,8 @@ body{
       
         
         .name{
-            margin-left: 1.5rem;
-            margin-top: 1rem;
+            width: 23.7%;
+            margin-left: 1rem;
         }
 
         .move{
@@ -315,7 +385,7 @@ body{
             .nav-list{
                position: fixed;
                top: 0;
-               left: 0;
+               left: -60px;
                display: none;
                overflow-y: scroll; 
                height: 100vh;
@@ -323,13 +393,25 @@ body{
                align-items: initial;
                background-color: #191919;
                z-index: 1000;
+               width: 100vw;
+               transition: transform 0.3s ease-in-out;
+               transform: translateX(100%);
             }
 
+            .nav-list.show{
+              transform: translateX(0); /* Add show class */
+            }
             .nav-list a{
                 font-size: 3rem;
                 margin-top: 3rem;
 
             }
+
+            .nav-list > li{
+              line-height: 8rem;
+              position: relative;
+              width: 52%;
+          }
             
 
             .sub-menu{
@@ -359,16 +441,20 @@ body{
             .ion-md-close{
                 display: none;
             }
-            nav.active .ion-md-close{
+      
+            nav.active-nav .ion-md-close{
+              transform: translateX(0%);
                 display: block;
                 margin-left: -6rem;
             }
 
-            nav.active .ion-md-menu{
+            nav.active-nav .ion-md-menu{
+              transform: translateX(0%);
                 display: none;
             }
 
-            nav.active .nav-list{
+            nav.active-nav .nav-list{
+              transform: translateX(0%);
                 display: flex;
             }
 
@@ -444,6 +530,7 @@ body{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) translateX(50px);
+  z-index: 100000;
 }
 @keyframes moveLeft {
   0% { left: 100%; }
@@ -636,6 +723,8 @@ body{
   position: relative;
   overflow: hidden;
 }
+
+
 
 .img-wrapper > img {
   display: block;
@@ -923,7 +1012,7 @@ h5{
 @media(max-width: 767px){
   .footer-col{
     width: 50%;
-    margin-bottom: 30px;
+    margin-top: -10px;
 }
 }
 @media(max-width: 574px){

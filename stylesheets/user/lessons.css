@@ -1,0 +1,184 @@
+html {
+  scroll-behavior: smooth;
+}
+
+h1 {
+  color: white;
+  font-size: 5vw;
+}
+
+h2 {
+  color: white;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.container-lessons {
+  scroll-snap-type: y proximity;
+  overflow-y: scroll;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  color: white;
+  padding: 10px;
+  z-index: 1; /* Ensure the nav appears above other elements */
+}
+
+section {
+  height: 100vh;
+  width: 100vw;
+  scroll-snap-align: start;
+  scroll-margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  box-sizing: border-box;
+  box-shadow: 1px 8px 50px 12px rgba(0, 0, 0, 0.76);
+  transition: opacity 1s ease-in-out, visibility 1s;
+  margin-top: 30px; /* Add margin to account for the fixed nav */
+}
+
+
+
+section.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Adjust the background images for each section */
+section:nth-child(1) {
+  background-image: url("../../assets/online-chess-classes.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+section:nth-child(2) {
+  background-image: url("../../assets/learn-how-to-play-chess.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+section:nth-child(3) {
+  background-image: url("../../assets/pexels-george-becker-131616.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.main_title {
+  font-size: 32px;
+  color: #fff;
+  letter-spacing: 2px;
+  padding: 15px 25px;
+  border-radius: 3px;
+  text-align: center;
+  width: 700px;
+  margin: 0 auto 25px;
+}
+
+.accordion_wrap ul {
+  display: flex;
+  justify-content: flex-end; /* Align accordions to the right side */
+}
+
+.accordion_wrap .accordion_item {
+  list-style: none;
+  width: 175px; /* Adjusted width */
+  height: 100%; /* Vertically tall */
+  background: #edc856;
+  border-right: 1px solid #a48d2d;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s linear;
+}
+
+.accordion_wrap .accordion_item:hover,
+.accordion_wrap li.active .accordion_item {
+  background: #a48d2d;
+  border-right: 1px solid #edc856;
+}
+
+.accordion_wrap li:first-child .accordion_item {
+  border-top-right-radius: 3px; /* Adjusted border radius */
+  border-bottom-right-radius: 3px; /* Adjusted border radius */
+}
+
+.accordion_wrap li:last-child .accordion_item,
+.accordion_wrap li:last-child .accordion_menu {
+  border-right: 0px;
+  border-top-left-radius: 3px; /* Adjusted border radius */
+  border-bottom-left-radius: 3px; /* Adjusted border radius */
+}
+
+.accordion_wrap ul li {
+  display: flex;
+}
+
+.accordion_menu {
+  width: 0px;
+  height: 100%; /* Vertically tall */
+  background: #fffaeb;
+  color: #a48d2d;
+  overflow: hidden;
+  transition: width 0.2s ease;
+  position: absolute;
+  top: 0;
+  right: 100%; /* Pushed to the right */
+  left: 0;
+}
+
+.accordion_wrap ul li.active .accordion_menu {
+  width: 100%; /* Full width */
+  right: 0;
+}
+
+.accordion_menu .inner_am {
+  padding: 15px;
+}
+
+.accordion_menu .title {
+  font-weight: 600;
+  transform: rotate(-90deg); /* Vertical text */
+  transform-origin: left center; /* Set rotation origin */
+  white-space: nowrap; /* Prevent text wrapping */
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.accordion_menu .content {
+  font-size: 13px;
+  font-weight: 300;
+  margin: 10px 0;
+}
+
+.accordion_menu .view_more {
+  padding: 5px;
+  background: #a48d2d;
+  color: #fffaeb;
+  width: 125px;
+  text-align: center;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.accordion_menu .view_more:hover {
+  text-decoration: underline;
+}
