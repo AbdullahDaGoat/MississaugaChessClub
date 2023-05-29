@@ -47,7 +47,7 @@
 .btn-box-results-tab .fa{
     margin-right: 20px;
 }
-
+ 
 .btn-results-tab{
     background: transparent;
     border: none;
@@ -270,11 +270,14 @@ iframe{
 }
 
 /* Define a parent container for the footer */
-.footer-container {
+
+.container-footer {
+  background-color: #000;
   position: absolute;
-  bottom: -50rem;
-  left: 0;
+  top: 90rem;
+  left: 0rem;
   right: 0;
+  z-index: 0;
 }
 
 
@@ -313,7 +316,7 @@ iframe{
     height: 70rem;
   }
 
-  .footer-container {
+  .container-footer {
     height: 90%;
     top: 110rem;
     left: 0;
@@ -339,7 +342,7 @@ iframe{
     height: 70rem;
   }
 
-  .footer-container {
+  .container-footer {
     height: 150%;
     top: 110rem;
     left: 0;

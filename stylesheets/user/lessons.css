@@ -90,95 +90,9 @@ section:nth-child(3) {
   margin: 0 auto 25px;
 }
 
-.accordion_wrap ul {
-  display: flex;
-  justify-content: flex-end; /* Align accordions to the right side */
+.first-title h1{
+  margin-top: -20rem;
 }
 
-.accordion_wrap .accordion_item {
-  list-style: none;
-  width: 175px; /* Adjusted width */
-  height: 100%; /* Vertically tall */
-  background: #edc856;
-  border-right: 1px solid #a48d2d;
-  cursor: pointer;
-  position: relative;
-  transition: all 0.2s linear;
-}
+/* accordian */
 
-.accordion_wrap .accordion_item:hover,
-.accordion_wrap li.active .accordion_item {
-  background: #a48d2d;
-  border-right: 1px solid #edc856;
-}
-
-.accordion_wrap li:first-child .accordion_item {
-  border-top-right-radius: 3px; /* Adjusted border radius */
-  border-bottom-right-radius: 3px; /* Adjusted border radius */
-}
-
-.accordion_wrap li:last-child .accordion_item,
-.accordion_wrap li:last-child .accordion_menu {
-  border-right: 0px;
-  border-top-left-radius: 3px; /* Adjusted border radius */
-  border-bottom-left-radius: 3px; /* Adjusted border radius */
-}
-
-.accordion_wrap ul li {
-  display: flex;
-}
-
-.accordion_menu {
-  width: 0px;
-  height: 100%; /* Vertically tall */
-  background: #fffaeb;
-  color: #a48d2d;
-  overflow: hidden;
-  transition: width 0.2s ease;
-  position: absolute;
-  top: 0;
-  right: 100%; /* Pushed to the right */
-  left: 0;
-}
-
-.accordion_wrap ul li.active .accordion_menu {
-  width: 100%; /* Full width */
-  right: 0;
-}
-
-.accordion_menu .inner_am {
-  padding: 15px;
-}
-
-.accordion_menu .title {
-  font-weight: 600;
-  transform: rotate(-90deg); /* Vertical text */
-  transform-origin: left center; /* Set rotation origin */
-  white-space: nowrap; /* Prevent text wrapping */
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  text-align: center;
-}
-
-.accordion_menu .content {
-  font-size: 13px;
-  font-weight: 300;
-  margin: 10px 0;
-}
-
-.accordion_menu .view_more {
-  padding: 5px;
-  background: #a48d2d;
-  color: #fffaeb;
-  width: 125px;
-  text-align: center;
-  border-radius: 3px;
-  cursor: pointer;
-  font-size: 13px;
-}
-
-.accordion_menu .view_more:hover {
-  text-decoration: underline;
-}
