@@ -18,22 +18,58 @@ document.addEventListener("DOMContentLoaded", () => {
   sections.forEach((section) => {
     sectionObserver.observe(section);
   });
+
+  if (window.innerWidth <= 580) {
+    alert("Sorry, this part of the site is only available on Mobile.");
+    window.location.href = "./errors/404.shtml";
+  }
 });
 
-var li_items = document.querySelectorAll(".accordion_wrap ul li");
-var ul = document.querySelector(".accordion_wrap ul");
 
-li_items.forEach(function(item){
-	item.addEventListener("click", function(){
-		li_items.forEach(function(item){
-			item.classList.remove("active");
-		})
-		item.classList.add("active");
-	});
+const tabMenu = document.querySelector(".tab-menu");
+
+// draggable menu
+let activeDrag = false;
+tabMenu.addEventListener("mousemove", (drag) => {
+  if(!activeDrag) return;
+  tabMenu.scrollLeft -= drag.movementX;
+  tabMenu.classList.add("dragging");
+
 });
 
-ul.addEventListener("mouseleave", function(){
-	li_items.forEach(function(item){
-		item.classList.remove("active");
-	})
+document.addEventListener("mouseup", () => {
+  activeDrag = false;
+  tabMenu.classList.remove("dragging");
+})
+
+tabMenu.addEventListener("mousedown", () => {
+  activeDrag = true;
 });
+
+const tabs = document.querySelectorAll(".tabs");
+const tabBtn = document.querySelectorAll(".tab-btn");
+
+const tab_Nav = function(tabBtnClick){
+  tabBtn.forEach( (tabBtn, i) => {
+    if (i === tabBtnClick) {
+      tabBtn.classList.add("active");
+    } else {
+      tabBtn.classList.remove("active");
+    }
+  });
+
+  tabs.forEach( (tab, i) => {
+    if (i === tabBtnClick) {
+      tab.classList.add("active");
+    } else {
+      tab.classList.remove("active");
+    }
+  });
+}
+
+tabBtn.forEach( (tabBtn, i) => {
+  tabBtn.addEventListener("click", () => {
+      tab_Nav(i);
+    });
+})
+
