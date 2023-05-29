@@ -31,45 +31,43 @@ const tabMenu = document.querySelector(".tab-menu");
 // draggable menu
 let activeDrag = false;
 tabMenu.addEventListener("mousemove", (drag) => {
-  if(!activeDrag) return;
+  if (!activeDrag) return;
   tabMenu.scrollLeft -= drag.movementX;
   tabMenu.classList.add("dragging");
-
 });
 
 document.addEventListener("mouseup", () => {
   activeDrag = false;
   tabMenu.classList.remove("dragging");
-})
+});
 
 tabMenu.addEventListener("mousedown", () => {
   activeDrag = true;
 });
 
-const tabs = document.querySelectorAll(".tabs");
+const tabs = document.querySelectorAll(".tab"); // Changed from '.tabs' to '.tab'
 const tabBtn = document.querySelectorAll(".tab-btn");
 
-const tab_Nav = function(tabBtnClick){
-  tabBtn.forEach( (tabBtn, i) => {
-    if (i === tabBtnClick) {
-      tabBtn.classList.add("active");
-    } else {
-      tabBtn.classList.remove("active");
-    }
+const tab_Nav = function (tabBtnClick) {
+  tabBtn.forEach((tabBtn) => {
+    tabBtn.classList.remove("active");
   });
 
-  tabs.forEach( (tab, i) => {
+  tabs.forEach((tab, i) => {
+    tab.classList.remove("active");
     if (i === tabBtnClick) {
       tab.classList.add("active");
-    } else {
-      tab.classList.remove("active");
     }
   });
-}
 
-tabBtn.forEach( (tabBtn, i) => {
+  tabBtn[tabBtnClick].classList.add("active");
+};
+
+// Set the first tab as active by default
+tab_Nav(0);
+
+tabBtn.forEach((tabBtn, i) => {
   tabBtn.addEventListener("click", () => {
-      tab_Nav(i);
-    });
-})
-
+    tab_Nav(i);
+  });
+});
