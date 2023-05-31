@@ -192,6 +192,14 @@ section:nth-child(3) {
   opacity: 0;
 }
 
+.left2{
+  margin-left: -10rem;
+}
+
+.right2{
+  margin-left: -8rem;
+}
+
 .tab.active{
   transform: translate(0);
   content-visibility: visible;
