@@ -1,0 +1,306 @@
+
+
+/* Colors 
+    #9c5200 (Dark brown beige)
+    #aa6c26 (Lighter but Dark brown beige)
+    #b37b3c (brown beige)
+    #c59a6a (lighter brown beige)
+    #dcc3a6 (much lighter brown beige)
+    #e7d5c1 (light brownish grey)
+    #f1e7dc (lightest of them all)
+    #0000 (Black)
+    #FFFF(white)
+    #FF0000 (Red)
+ */
+
+
+ 
+
+
+.container-footer {
+  background-color: #000;
+  position: absolute;
+  top: 120rem;
+  left: 0rem;
+  right: 0;
+  z-index: 0;
+}
+
+@media screen and (min-width: 970px) and (max-width: 1331px){
+  .container-footer{
+    top: 180rem;
+  }
+}
+
+
+
+ @media screen and (max-width: 1091px){
+  header{
+    display: none;
+  }
+ }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "Open Sans", sans-serif;
+  }
+  
+  body {
+    display: grid;
+    place-items: center;
+    min-height: 250vh;
+    background-image: url("../../assets/parties/IMG_6122.jpg");
+      /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .pricing-plans {
+    gap: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 100%;
+    padding: 64px;
+  }
+  
+  .pricing-card {
+
+    --col: #e4e4e7;
+    position: relative;
+    min-width: 360px;
+    padding: 32px;
+    padding-bottom: 96px;
+    border-radius: 4px;
+    border: 1px solid #000000;
+    background-color: #000000c7;
+    box-shadow: 0 0 32px transparent;
+    text-align: center;
+  }
+  
+  .pricing-card.basic {
+    --col: rgb(0, 253, 0); 
+  }
+  
+  .pricing-card.standard {
+    --col: rgb(37, 134, 214);
+  }
+  
+  .pricing-card.premium {
+    --col: orangered;
+  }
+  
+  .pricing-card:hover {
+    border-color: var(--col);
+    background-color: #000000c7;
+    box-shadow: 0 0 32px var(--col);
+    transform: translateY(-16px) scale(1.02);
+    transition: all 0.5s ease;
+  }
+  
+  .pricing-card > *:not(:last-child) {
+    margin-bottom: 32px;
+  }
+  
+  .pricing-card .heading h4 {
+    padding-bottom: 12px;
+    color: var(--col);
+    font-size: 24px;
+    font-weight: normal;
+  }
+  
+  .pricing-card .heading p {
+    color: #a3a3a3;
+    font-size: 14px;
+    font-weight: lighter;
+  }
+  
+  .pricing-card .price {
+    position: relative;
+    color: var(--col);
+    font-size: 60px;
+    font-weight: bold;
+  }
+  
+  .pricing-card .price sub {
+    position: absolute;
+    bottom: 14px;
+    color: #a3a3a3;
+    font-size: 14px;
+    font-weight: lighter;
+  }
+  
+  .pricing-card .features li {
+    padding-bottom: 16px;
+    color: #a3a3a3;
+    font-size: 16px;
+    font-weight: lighter;
+    text-align: left;
+  }
+  
+  .pricing-card .features li i,
+  .pricing-card .features li strong {
+    color: #e4e4e7;
+    font-size: 16px;
+    text-align: left;
+  }
+  
+  .pricing-card .features li strong {
+    padding-left: 24px;
+  }
+  
+  .pricing-card .cta-btn {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid var(--col);
+    background-color: var(--col);
+    color: #e4e4e7;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .pricing-card .cta-btn:active {
+    background-color: transparent;
+    color: var(--col);
+    transition: all 0.3s ease;
+  }
+  
+  
+  /* Ribbon Title */
+  .ribbon-title {
+   font-size: 22px !important;
+   width: 50%;
+      
+   position: relative;
+   background: #9c5200;
+   color: #fff;
+   text-align: center;
+   padding: 1em 2em; /* Adjust to suit */
+   margin: 2em auto 3em;
+   margin-top: 10rem;
+  }
+  .ribbon-title:before, .ribbon-title:after {
+   content: "";
+   position: absolute;
+   display: block;
+   bottom: -1em;
+   border: 1.5em solid #9c5200;
+   z-index: -1;
+  }
+  .ribbon-title:before {
+   left: -2em;
+   border-right-width: 1.5em;
+   border-left-color: transparent;
+  }
+  .ribbon-title:after {
+   right: -2em;
+   border-left-width: 1.5em;
+   border-right-color: transparent;
+  }
+  .ribbon-title .ribbon-title-content:before, .ribbon-titile .ribbon-title-content:after {
+   content: "";
+   position: absolute;
+   display: block;
+   border-style: solid;
+   border-color: #9c5200 transparent transparent transparent;
+   bottom: -1em;
+  }
+  .ribbon-title .ribbon-title-content:before {
+   left: 0;
+   border-width: 1em 0 0 1em;
+  }
+  .ribbon-titile .ribbon-title-content:after {
+   right: 0;
+   border-width: 1em 1em 0 0;
+  }
+
+  /* Offer Ribbons */
+  .ribbon-wrap{
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+  }
+
+  .ribbon-wrap3::before, .ribbon-wrap3::after, .ribbon3{
+    background: orange;
+  }
+
+  .ribbon-wrap1::before, .ribbon-wrap1::after, .ribbon1{
+    background: rgb(12, 128, 12);
+  }
+
+  .ribbon-wrap2::before, .ribbon-wrap2::after, .ribbon2{
+    background: rgb(3, 49, 64);
+  }
+
+
+
+  .ribbon-wrap::before, .ribbon-wrap::after{
+    content: " ";
+    width:  10px;
+    height: 10px;
+    position: absolue;
+    z-index: -1;
+  }
+
+  .ribbon-wrap::before{
+    top: 0;
+    right: 0;
+  }
+
+  .ribbon-wrap::after{
+    bottom: 0;
+    left: 0;
+  }
+  .ribbon{
+    width: 225px;
+    font-size: 15px;
+    text-align: center;
+    padding: 8px 0;
+    color: #fff;
+    position: absolute;
+    transform: rotate(-45deg);
+    right: -17%;
+    top: 29%;
+    font-weight: 400;
+
+  }
+
+
+
+ 
+   
+@media (max-width: 964px) {
+
+  .ribbon-title, .ribbon-title-content{
+    width: 400px;
+    margin-top: 1rem;
+    white-space: nowrap;
+
+  }
+
+  .ribbon-title{
+    margin-left: 5rem;
+  }
+
+
+  .container-footer{
+    height: 200vh;
+    top: 230rem;
+  }
+}
+
+
+  

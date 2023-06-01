@@ -16,7 +16,7 @@ body{
 
 .slider{
   position: absolute;
-  width: 125rem;
+  width: 132rem;
   height: 48rem;
   margin: 20px;
   margin-top: 14rem;
@@ -184,9 +184,15 @@ body{
   background: #aa6c26;
 }
 
+@media (max-width: 1020px){
+  .slider{
+    width: 95%;
+  }
+}
 @media (max-width: 900px){
   .slider{
-    width: 100%;
+    width: 90%;
+    left: -2rem;
   }
 
   .slider .slide .info{
@@ -618,7 +624,7 @@ body{
 
 .socials-body{
   margin-top: -4.5rem;
-  margin-left: 92rem;
+  margin-left: 97rem;
   display: grid;
   background: linear-gradient(315deg, #ffff, 0%, #d7e1ec, 74%);
 }
@@ -1057,7 +1063,7 @@ h5{
   }
 
   .slider{
-    margin-left: 1rem;
+    margin-left: 5rem;
   }
 
   .announcement-grid{
