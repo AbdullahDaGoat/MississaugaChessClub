@@ -20,7 +20,7 @@
 .container-footer {
   background-color: #000;
   position: absolute;
-  top: 120rem;
+  top: 130rem;
   left: 0rem;
   right: 0;
   z-index: 0;
@@ -28,7 +28,7 @@
 
 @media screen and (min-width: 970px) and (max-width: 1331px){
   .container-footer{
-    top: 180rem;
+    top: 120rem;
   }
 }
 
@@ -73,6 +73,7 @@
     --col: #e4e4e7;
     position: relative;
     min-width: 360px;
+    margin-left: -3rem;
     padding: 32px;
     padding-bottom: 96px;
     border-radius: 4px;
@@ -184,6 +185,8 @@
    background: #9c5200;
    color: #fff;
    text-align: center;
+   justify-content: center;
+   placement: center;
    padding: 1em 2em; /* Adjust to suit */
    margin: 2em auto 3em;
    margin-top: 10rem;
@@ -285,7 +288,7 @@
 @media (max-width: 964px) {
 
   .ribbon-title, .ribbon-title-content{
-    width: 400px;
+    width: 80vw;
     margin-top: 1rem;
     white-space: nowrap;
 
@@ -297,8 +300,8 @@
 
 
   .container-footer{
-    height: 200vh;
-    top: 230rem;
+    height: 150vh;
+    top: 250rem;
   }
 }
 
