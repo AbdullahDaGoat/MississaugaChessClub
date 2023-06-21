@@ -1,36 +1,49 @@
-        const canvas = document.getElementById("renderCanvas"); // Get the canvas element
-        const engine = new BABYLON.Engine(canvas, true); // Generate the BABYLON 3D engine
-        const createScene = function () {
-            // Creates a basic Babylon Scene object
-            const scene = new BABYLON.Scene(engine);
-            // Creates and positions a free camera
-            const camera = new BABYLON.FreeCamera("camera1", 
-                new BABYLON.Vector3(0, 5, -10), scene);
-            // Targets the camera to scene origin
-            camera.setTarget(BABYLON.Vector3.Zero());
-            // This attaches the camera to the canvas
-            camera.attachControl(canvas, true);
-            // Creates a light, aiming 0,1,0 - to the sky
-            const light = new BABYLON.HemisphericLight("light", 
-                new BABYLON.Vector3(0, 1, 0), scene);
-            // Dim the light a small amount - 0 to 1
-            light.intensity = 0.7;
-            // Built-in 'sphere' shape.
-            const sphere = BABYLON.MeshBuilder.CreateSphere("sphere", 
-                {diameter: 2, segments: 32}, scene);
-            // Move the sphere upward 1/2 its height
-            sphere.position.y = 1;
-            // Built-in 'ground' shape.
-            const ground = BABYLON.MeshBuilder.CreateGround("ground", 
-                {width: 6, height: 6}, scene);
-            return scene;
-        };
-        const scene = createScene(); //Call the createScene function
-        // Register a render loop to repeatedly render the scene
-        engine.runRenderLoop(function () {
-                scene.render();
-        });
-        // Watch for browser/canvas resize events
-        window.addEventListener("resize", function () {
-                engine.resize();
-        });
+const selectElement = (element) => document.querySelector(element);
+selectElement('.menu-icons').addEventListener('click', () => {
+  selectElement('#nav').classList.toggle('active-nav');
+});
+
+// Get the navbar and banner elements
+const navbar = document.querySelector('#nav');
+const header = document.querySelector('.header');
+const banner = document.querySelector('.banner');
+
+// Set the initial scroll position to the top of the page
+let prevScrollPos = window.scrollY;
+
+// Listen for the scroll event on the window object
+window.addEventListener('scroll', () => {
+  // Get the current scroll position
+  const currentScrollPos = window.scrollY;
+
+  // Determine the scroll direction
+  const isScrollingDown = currentScrollPos > prevScrollPos;
+
+  // Toggle the visibility of the navbar, header and banner based on the scroll direction
+  if (isScrollingDown) {
+    navbar.classList.remove('show');
+    navbar.classList.add('hidden');
+    header.classList.add('color');
+    banner.classList.add('hidden');
+  } else {
+    navbar.classList.remove('hidden');
+    navbar.classList.add('show');
+    header.classList.remove('color');
+    banner.classList.remove('hidden');
+  }
+
+  // Update the previous scroll position
+  prevScrollPos = currentScrollPos;
+});
+
+const navBar = document.querySelector(".nav-stuff");
+const menuBtn = document.querySelector(".menu-icon");
+const overlay = document.querySelector(".overlay");
+
+menuBtn.addEventListener("click", () => {
+  navBar.classList.toggle("open");
+});
+
+overlay.addEventListener("click", () => {
+  navBar.classList.remove("open");
+});

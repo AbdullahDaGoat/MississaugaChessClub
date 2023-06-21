@@ -71,3 +71,57 @@ tabBtn.forEach((tabBtn, i) => {
     tab_Nav(i);
   });
 });
+
+const selectElement = (element) => document.querySelector(element);
+selectElement('.menu-icons').addEventListener('click', () =>{
+          selectElement('nav').classList.toggle('active-nav');
+})
+
+
+// Get the navbar and banner elements
+const navbar = document.querySelector('#nav');
+const header = document.querySelector('.header');
+const banner = document.querySelector('.banner');
+
+// Set the initial scroll position to the top of the page
+let prevScrollPos = window.scrollY;
+
+// Listen for the scroll event on the window object
+window.addEventListener('scroll', () => {
+  // Get the current scroll position
+  const currentScrollPos = window.srcollY;
+
+  // Determine the scroll direction
+  const isScrollingDown = currentScrollPos > prevScrollPos;
+
+  // Toggle the visibility of the navbar, header and banner based on the scroll direction
+  if (isScrollingDown) {
+    navbar.classList.remove('show');
+    navbar.classList.add('hidden');
+    header.classList.add('color');
+    banner.classList.add('hidden');
+  } else {
+    navbar.classList.remove('hidden');
+    navbar.classList.add('show');
+    header.classList.remove('color');
+    banner.classList.remove('hidden');
+  }
+
+  // Update the previous scroll position
+  prevScrollPos = currentScrollPos;
+});
+
+const openNav = () => {
+  navbar.classList.add("active-nav")
+  navbar.classList.add("show")
+
+};
+
+const closeNav = () => {
+  navbar.classList.remove("active-nav")
+  navbar.classList.add("show")
+
+};
+
+document.querySelector('.menu').addEventListener('click', openNav);
+document.querySelector('.close').addEventListener('click', closeNav);
