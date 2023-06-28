@@ -35,15 +35,42 @@ window.addEventListener('scroll', () => {
   // Update the previous scroll position
   prevScrollPos = currentScrollPos;
 });
-
+// Relevant JavaScript
 const navBar = document.querySelector(".nav-stuff");
 const menuBtn = document.querySelector(".menu-icon");
-const overlay = document.querySelector(".overlay");
+const navLinks = document.querySelectorAll(".nav-link");
+const articles = document.querySelectorAll("article");
 
 menuBtn.addEventListener("click", () => {
   navBar.classList.toggle("open");
 });
 
-overlay.addEventListener("click", () => {
-  navBar.classList.remove("open");
+navLinks.forEach((link, index) => {
+  link.addEventListener("click", () => {
+    showArticle(index);
+  });
 });
+
+function showArticle(index) {
+  articles.forEach((article, idx) => {
+    if (idx === index) {
+      article.classList.add("show");
+      article.style.animation = "slide-in 0.3s forwards";
+    } else if (article.classList.contains("show")) {
+      article.style.animation = "slide-out 0.3s forwards";
+      setTimeout(() => {
+        article.classList.remove("show");
+      }, 500);
+    }
+  });
+}
+
+
+
+
+// ...
+
+    // Open appropriate Section
+
+
+

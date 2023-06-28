@@ -7,16 +7,18 @@
   font-family: "Poppins", sans-serif;
 }
 body {
-  background: black;
+  background: #dcc3a6;
   scroll-behavior: smooth;
-  white-space: nowrap;
+  overflow-y: hidden;
 }
 
-p{
-  margin-top: 30%;
-  margin-left: -50%;
+button{
+  border: none;
+  background: transparent;
 }
+
 .nav {
+  z-index: 1;
   position: fixed;
   top: 8rem;
   left: 0;
@@ -24,7 +26,7 @@ p{
   width: 5vw;
   display: flex;
   align-items: center;
-  background: #fff;
+  background: #dcc3a6;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
 }
 .nav .logo {
@@ -38,9 +40,11 @@ p{
   margin-right: 14px;
   cursor: pointer;
 }
-.logo .logo-name {
+.logo .logo-name-1 {
   color: #333;
-  font-size: 22px;
+  margin-left: 0rem;
+  margin-top: 3rem;
+  font-size: 4rem;
   font-weight: 500;
 }
 .nav .sidebar {
@@ -78,7 +82,9 @@ p{
   text-decoration: none;
 }
 .list .nav-link:hover {
-  background-color: #4070f4;
+  cursor: pointer;
+  background-color: #9c5200;
+  transition: all 0.2s ease;
 }
 .list .nav-link .icon {
   margin-right: 14px;
@@ -109,4 +115,50 @@ p{
   opacity: 1;
   left: 260px;
   pointer-events: auto;
+}
+
+
+/* ... */
+article{
+  display: none;
+  position: relative;
+  margin-top: 10rem;
+  margin-left: 28rem;
+  width: 72vw;
+  height: 50rem;
+}
+
+/* Add this to your CSS */
+
+article.show {
+  display: block;
+  animation: slide-in 0.5s forwards;
+}
+
+article h1{
+  text-align: center;
+}
+
+p{
+  width: 73vw;
+  white-space: normal;
+  word-break: break-all;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(200%);
+  }
 }
