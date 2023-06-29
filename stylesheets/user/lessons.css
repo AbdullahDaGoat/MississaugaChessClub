@@ -242,7 +242,7 @@ section:nth-child(3) {
 
 .city{
   background: black;
-  margin-left: 7rem;
+  margin-left: 6rem;
   margin-top: 2rem;
   font-size: 2.8em;
   width: 35vw;
@@ -253,7 +253,7 @@ section:nth-child(3) {
   background: black;
   color: var(--textcolor);
   width: 35vw;
-  margin-left: 7rem;
+  margin-left: 6rem;
   font-size: 1.8em;
 }
 
