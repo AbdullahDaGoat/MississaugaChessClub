@@ -19,15 +19,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/6bd6c771de.js" crossorigin="anonymous"></script>
-
+    <link
+    rel="stylesheet"
+    href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+  />
 </head>
 <body>
-    <!-- Todo
-        Todo: Add a underline on hover hover with about us
-        Todo: Our socials should be underneath the abut us text
-        Todo: Our mailing newsletter should also be underneath
-        Todo: Button should go to Contact Us Page, and be cirular
-        Todo: Modal should be here, nav bar, footer, and meet the team 
+    <!-- Todo (Phase 2)
+        Todo: Add a underline on hover  with about us
     -->
     <header class=" sticky-header header">
         <div class="container">
@@ -78,7 +77,7 @@
                     <a href="schedule.html"  class="links">Schedule</a>
                 </li>
                 <li>
-                  <a href="#"  class="links">About Us
+                  <a href="volunteer.html"  class="links">About Us
                     <i class="icon ion-md-arrow-dropdown"></i>
                   </a>
                   <ul class="sub-menu">
@@ -245,19 +244,23 @@
               
             </div>
             
-        </div>
-        
+        </div>   
     </section>
 
-
-
-
-
-
-
-
-
-
+    <section class="newsletter-wrapper">
+        <div class="content-newsletter">
+            <div class="newsletter-header">
+                <h1>Sign up to our Newsletter below</h1>
+            </div>
+            <div class="footer-newsletter">
+                <form id="submit-to-google-sheet">
+                    <input type="email" name="email" value="name@email.com" placeholder="Enter Email Here" required />
+                    <button class="newsletter-button" role="button">Subscribe <i class="fa-solid fa-paper-plane"></i> </button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </section>
     <!-- Footer-->
     <footer class="footer">
         <div class="container">
@@ -317,5 +320,54 @@
           </div>
         </div>
       </footer>
+
+
+      <script async>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbx-qwpPL2qhp41pq86nVD2vy_O_qJHoB4f9MznHftETckvv7eU30ZsnfmF3EN4OwNEv0Q/exec'
+const form = document.forms['submit-to-google-sheet']
+const msg = document.getElementById('msg')
+const submissionDate = localStorage.getItem('submissionDate')
+if (submissionDate) {
+    const oneWeek = 24 * 60 * 60 * 1000 //Cant submit unless one day passed 
+  const timeSinceSubmission = Date.now() - submissionDate
+  if (timeSinceSubmission < oneWeek) {
+    form.querySelector('input[name="email"]').style.display = 'none'
+    const button = document.querySelector('.newsletter-button')
+    button.textContent = 'You have subscribed'
+  }
+}
+
+form.addEventListener('submit', e => {
+  e.preventDefault()
+
+  const submissionDate = localStorage.getItem('submissionDate')
+  if (submissionDate) {
+   const oneWeek = 24 * 60 * 60 * 1000  //Cant submit unless one day passed 
+    const timeSinceSubmission = Date.now() - submissionDate
+    if (timeSinceSubmission < oneWeek) {
+      alert('To prevent spam, we limit one submission per day.')
+      return
+    }
+  }
+
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => {
+      msg.textContent = 'Thank you for subscribing!'
+      setTimeout(function() {
+        msg.textContent = ''
+      }, 10000);
+      console.log('Message Sent Successfully')
+      form.querySelector('input[name="email"]').style.display = 'none'
+      const button = document.querySelector('.newsletter-button')
+      button.textContent = 'You have subscribed'
+      localStorage.setItem('submissionDate', Date.now())
+    })
+    .catch(error => {
+      alert('Message Failed to Sent Please Reach out to Us')
+      alert('Please press Ctrl + I, and go to console and give us the error message recieved in the form')
+      console.error('Error!', error.message)
+    })
+})
+      </script>
 </body>
 </html>

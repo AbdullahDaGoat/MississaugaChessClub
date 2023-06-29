@@ -10,9 +10,36 @@
     #FFFF(white)
     #FF0000 (Red)
  */
+ .heading h1{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
+    color: #ff6347;
+    font-size: 55px;
+    text-align: center;
+    animation: fadeIn 2s ease;
+  }
+  
+  .heading h1::before {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: calc(42% - 32px); /* half of the width of "About Us" text */
+    width: 0px; /* width of the "About Us" text */
+    height: 3px;
+    background-color: black;
+    transition: width 0.3s ease;
+  }
+  
+  .heading h1:hover::before {
+    width: 21%;
+  }
+  
 
 footer{
-    margin-top: 0rem;
+    margin-top: 2rem;
 }
 
 .footer-col{
@@ -31,13 +58,6 @@ footer{
     overflow: hidden
 }
 
-.heading h1{
-    color: #ff6347;
-    font-size: 55px;
-    text-align: center;
-    margin-top: 10rem;
-    animation: fadeIn 2s ease;
-}
 
 .container-about-us{
     display: flex;
@@ -291,3 +311,95 @@ a{
     }
   }
   
+  :root{
+    --start-color: #0575e6;
+    --end-color: #021b79;
+    --button-background: #ff4500;
+    --input-background: #e4eff8;
+    --radius-50: 50px;
+    --padding-15: 15px;
+  }
+
+  body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+
+  .newsletter-wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    margin-top: 20px;
+  }
+
+  .content-newsletter{
+    background: #b37b3c;
+    padding: 40px;
+    width: 100%;
+    max-width: 500px;
+    min-width: 200px;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .content-newsletter .newsletter-header h1{
+    font-size: 230%;
+    margin-top: 0;
+    color: #fff;
+  }
+
+ .footer-newsletter{
+    padding: 15px;
+  }
+
+  input{
+    border: unset;
+    background-color: var(--input-background);
+    padding: 15px;
+    font-size: 14px;
+    border-radius: 50px;
+    width: 250px;
+  }
+
+  .newsletter-button{
+    background-color: var(--button-background);
+    color: #fff;
+    border: unset;
+    width: 155px;
+    padding: 15px;
+    border-radius: 50px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: 0.3s ease
+  }
+
+  .newsletter-button:hover{
+    background-color: #ff5500;
+    transform: scale(1.1);
+  }
+
+  input:focus,
+  .footer-newsletter:focus{
+    outline: none;
+  }
+
+span{
+    color: #fff;
+    margin-top: 20px;
+    display: block;
+    font-size: 14px;
+    position: absolute;
+    border-radius: 0.31em;
+}
+
+span:hover{
+    border: 2px solid red;
+    background-color: black;
+}
+
+button{
+    text-wrap: nowrap
+}
