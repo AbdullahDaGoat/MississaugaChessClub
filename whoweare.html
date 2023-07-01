@@ -25,12 +25,9 @@
   />
 </head>
 <body>
-    <!-- Todo (Phase 2)
-        Todo: Add a underline on hover  with about us
-    -->
     <header class=" sticky-header header">
         <div class="container">
-            <nav id="nav">
+            <nav id="nav" style="margin-left: -2rem;">
                 <div class="menu-icons">
                     <i class="icon ion-md-menu"></i>
                     <i class="icon ion-md-close"></i>
@@ -77,34 +74,25 @@
                     <a href="schedule.html"  class="links">Schedule</a>
                 </li>
                 <li>
-                  <a href="volunteer.html"  class="links">About Us
+                  <a href="#"  class="links">About Us
                     <i class="icon ion-md-arrow-dropdown"></i>
                   </a>
                   <ul class="sub-menu">
                     <li class="has-sub-menu">
                       <a href="whoweare.html"  class="links">Who We Are!</a>
                     </li>
-                    <li class="has-sub-menu">
-                        <a href="#"  class="links">Volunteer</a>
-                    </li>
                     <li  class="links">
-                        <a href="www.example.com"  class="links">Sponsor &amp; Donors</a>
+                      <a href="contact.html"  class="links">Contact Us</a>
                     </li>
-                    <li  class="links">
-                      <a href="www.example.com"  class="links">Contact Us</a>
-                  </li>
                   <li  class="links">
                     <a href="www.example.com"  class="links">FAQ</a>
                 </li>
                 </ul>
               </li>
-                <li>
+                <li style="margin-left: -2rem;">
                     <a href="#"  class="links">Other
                       <i class="icon ion-md-arrow-dropdown"></i>
                       <ul class="sub-menu">
-                        <li class="has-sub-menu">
-                          <a href="#"  class="links">Photos</a>
-                      </li>
                         <li class="has-sub-menu">
                             <a href="#"  class="links">External Links</a>
                         </li>
@@ -114,7 +102,7 @@
                       </ul>
                     </a>
                 </li>
-                <li>
+                <li style="margin-left: -2rem;">
                   <a href="#"  class="links">Login/Signup</a>
               </li>
                </ul>
@@ -323,7 +311,7 @@
 
 
       <script async>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbx-qwpPL2qhp41pq86nVD2vy_O_qJHoB4f9MznHftETckvv7eU30ZsnfmF3EN4OwNEv0Q/exec'
+const scriptURL = 'https://script.google.com/macros/s/AKfycbx-qwpPL2qhp41pq86nVD2vy_O_qJHoB4f9MznHftETckvv7eU30ZsnfmF3EN4OwNEv0Q/exec'
 const form = document.forms['submit-to-google-sheet']
 const msg = document.getElementById('msg')
 const submissionDate = localStorage.getItem('submissionDate')

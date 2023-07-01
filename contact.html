@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCC | Contact Us</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet"/>
+
+    <link href="./stylesheets/user/contact.css" rel="stylesheet" type="text/css" />    
+    <link href="./stylesheets/user/nav.css" rel="stylesheet" type="text/css" />   
+    <link href="./stylesheets/user/footer.css" rel="stylesheet" type="text/css" />   
+
+    <link rel="icon" type="image/png" sizes="64x64" href="/assets/logo.gif"/>
+
+    <script type="text/javascript" src="./src/user/contact.js" defer></script>
+    <link
+    href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+    rel="stylesheet"
+  />
+</head>
+<body>
+    <header class=" sticky-header header">
+        <div class="container">
+            <nav id="nav" style="margin-left: -2rem;">
+                <div class="menu-icons">
+                    <i class="icon ion-md-menu"></i>
+                    <i class="icon ion-md-close"></i>
+                </div>
+               <a href="index.html" title="Return to Index Image" rel="nofollow" class="logo">
+                <img src="/assets/logo2.gif" alt="Logo" width="58" height="68">
+               </a> 
+               <div class="name">
+                <img src="/assets/logotype.gif" width="330" height="40" alt="Logo-name" class="logo-name">
+               </div>
+            <div class="move">
+               <ul class="nav-list  nav-list-wow">
+                <li>
+                    <a href="index.html" class="links">Home</a>
+                </li>
+                <li>
+                  <a href="announcements.html"  class="links">Announcements</a>
+              </li>
+                <li>
+                    <a href="#"  class="links">Chess
+                    <i class="icon ion-md-arrow-dropdown"></i>
+                    </a>
+                    <ul class="sub-menu">
+                      <li  class="links">
+                        <a href="Lessons.html"  class="links">Lessons &amp; Topics</a>
+                    </li>
+                    <li  class="links">
+                      <a href="pricing.html"  class="links">Pricing</a>
+                  </li>
+                        <li class="has-sub-menu">
+                            <a href="results.html"  class="links">Results</a>
+                        </li>
+                        <li  class="links">
+                            <a href="champions.html"  class="links">Champions</a>
+                        </li>
+                        
+                        <li  class="links">
+                          <a href="guides.html" class="links">Guides
+                          </a>
+                      </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="schedule.html"  class="links">Schedule</a>
+                </li>
+                <li>
+                  <a href="#"  class="links">About Us
+                    <i class="icon ion-md-arrow-dropdown"></i>
+                  </a>
+                  <ul class="sub-menu">
+                    <li class="has-sub-menu">
+                      <a href="whoweare.html"  class="links">Who We Are!</a>
+                    </li>
+                    <li  class="links">
+                      <a href="contact.html"  class="links">Contact Us</a>
+                    </li>
+                  <li  class="links">
+                    <a href="faq.html"  class="links">FAQ</a>
+                  </li>
+                </ul>
+              </li>
+                <li style="margin-left: -2rem;" >
+                    <a href="#"  class="links">Other
+                      <i class="icon ion-md-arrow-dropdown"></i>
+                      <ul class="sub-menu">
+                        <li class="has-sub-menu">
+                            <a href="#"  class="links">External Links</a>
+                        </li>
+                        <li  class="links">
+                            <a href="www.example.com"  class="links">Archives &amp; Memories</a>
+                        </li>
+                      </ul>
+                    </a>
+                </li>
+                <li style="margin-left: -2rem;">
+                  <a href="#"  class="links">Login/Signup</a>
+              </li>
+               </ul>
+            </div>
+            </nav>
+        </div>   
+    </header> 
+    <!-- Content -->
+    <section class="email-us">
+        <div class="contactUs">
+            <div class="title">
+                <h2>Get in Touch</h2>
+            </div>
+            <div class="box">
+                <div class="contact form">
+                    <form onsubmit="sendEmail(); reset(); return false; ">
+                      <div class="formBox">
+                        <div class="row50">
+                          <div class="inputBox">
+                            <span>Full Name</span>
+                            <input type="text" placeholder="Your Name" id="name" required/>
+                          </div>
+                        </div>
+
+                        <div class="row50">
+                          <div class="inputBox">
+                            <span>Email</span>
+                            <input type="email" placeholder="Your Email" id="email" required/>
+                          </div>
+                          <div class="inputBox">
+                            <span>Phone Number</span>
+                            <input type="phone" id="phone" placeholder="Your Phone Number"/>
+                          </div>
+                        </div>
+
+                        <div class="row100">
+                          <div class="inputBox">
+                            <span>Message</span>
+                            <textarea id="text" placeholder="Write Your Message here, we will respond in 48 hours or less, please be detailed and patient"></textarea>
+                          </div>
+                        </div>
+
+                        <div class="row100">
+                          <div class="inputBox">
+                           <input type="submit" value="Send"/>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                </div>
+                <div class="contact info">
+                  <h3>Our Contact Info</h3>
+                  <br/>
+                  <div class="infoBox">
+                    <div>
+                      <span><ion-icon name="location-outline"></ion-icon></span>
+                      <p>1444 Dundas Crescent, Mississauga, ON ( Park in the back)</p>
+                    </div>
+                    <div>
+                      <span><ion-icon name="mail-outline"></ion-icon></span>
+                      <a href="mailtoHello@Mississaugachessclub.ca">Hello@Mississaugachessclub.ca</a>
+                    </div>
+
+                    <div>
+                      <span><ion-icon name="call-outline"></ion-icon></span>
+                      <a href="tel:+14372686221"> +1(437) 268-6221</a>
+                    </div>
+
+                    <ul class="sci">
+                      <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                      <li><a href="#"><i class="fa-solid fa-chess-knight fa-flip-horizontal"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="contact map">
+                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2891.802313450409!2d-79.65198212512406!3d43.548162559219975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b4400636b32bb%3A0x7c55fa8bb756300!2sMississauga%20Chess%20Club!5e0!3m2!1sen!2sca!4v1688098133123!5m2!1sen!2sca" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Volunteer with us information -->
+    <section class="extrainfo">
+      <h1 class="Time">Time and Location</h1>
+      <br/>
+      <br/>
+      <h2 class="Adult">Adult Club: 6:30pm - 10:30pm Wednesday Nights</h2>
+      <br/>
+      <h2 class="Youth">Youth Club: 6:30pm - 9pm Monday Nights      </h2>
+      <br/>
+      <br/>
+      <h2 class="Note"><strong>Please Note!!!</strong></h2>
+      <p>Registration time is between 6:30pm and 7:00pm. Games start at 7:15pm. Please ensure you arrive by 7:00pm to register your name for the night's tournament. On Wednesday if you are running late please call us before 7:00pm and ask to be paired.</p>
+      <p>We would like to get home, but we cannot if all emmebers do not have a ride. So please have a ride</p>
+      <br/>
+      <h3>Getting Here:</h3>
+      <p><strong>Public Transit: </strong> MiWay routes 1/1C stop at Dundas Crescent. Please note if you are going westbound, there are no pedestrian crossings at Dundas Crescent. <em>Please Plan accordingly.</em></p>
+      <br/>
+      <p><strong>Driving: </strong>We have free parking in the front and back lots.</p>
+      <br/>
+      <p><strong>Walking: </strong> If you live nearby, exercise and play chess at the same time!</p>
+      <br/>
+      <br/>
+    </section>
+    <section class="volunteer">
+        <br/>
+        <article>
+            <br/>
+            <h1 class="main-title-volunteer">Volunteer With Us!</h1>
+            <h2 class="sub-title-1"> What is The Mississauga Chess Club</h2>
+            <p class="para1">The Mississauga Chess Club is the largest chess club in Canada that operates on two nights, one for youth and one for adults and advanced youths. Tournament games are played weekly.</p>
+            <h2 class="sub-title-2">What Our Volunteers do</h2>
+            <p>Our volunteers help us do many of the tasks that make a chess club possible. Kids look forward to playing chess each week, and volunteers help make that possible. Duties include setting up and putting away chess club equipment, assisting kids and parents, playing and helping kids new to chess. This is a great opportunity especially if chess is an interest.</p>
+            <h2>Getting Started</h2>
+            <ol>
+                <li>We will give hours to high school students completing their 40 hours.</li>
+                <li>Knowledge of how chess works is not a requirement and we can teach if you are new!</li>
+                <li>A Resume is Not Required</li>
+            </ol>
+            </p>
+            <h2>Openings:</h2>
+            <ul>
+                <li>Monday Nights</li>
+                <li>Wednesday Nights</li>
+            </ul>
+            <br/>
+            <h3>If you would like to Volunteer, please come to us via the destination above, or contact us in advance by emailing us and putting the subject as "Volunteer" (Please use the above contact form)</h3>
+            <br/>
+        </article>
+        <br/>
+    </section>
+    <br/>
+    <!-- Donors / affiliates -->
+    <section class="partners">
+        <div class="title-partners">
+            <h1>Our Donors / Partners</h1>
+            <p>A <strong>Special</strong> thanks to our <em>generous</em> donors, If you would like to become a donor please contact us with the subject Partner / Donor</p>
+        </div>
+        <div class="donors">
+            <a href="https://linkedkey.com/">
+                <img src="./assets/Donor1.png" alt="Donor1" width="350px" height="200px" />
+            </a>
+            <a href="https://q-learning.ca/">
+                <img class="image2" src="./assets/Donor2.jpg" alt="Donor2" width="350px" height="190px"/>
+            </a>
+            <a href="https://canadachess.ca/">
+                <img src="./assets/Donor3.png" alt="Donor3" width="450px" height="200px"/>
+            </a>
+        </div>
+    </section>
+    <!-- Footer -->
+
+    <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="footer-col">
+              <h4>Legal</h4>
+              <ul>
+                <li><a>Privacy Policy</a></li>
+                <li><a>Terms of Conditions</a></li>
+                <li><a>Cookies and Trackers</a></li>
+                <li><a>Data usage / Delete my Data</a></li>
+                <li><a>Other</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Chess</h4>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="announcements.html">Announcements</a></li>
+                <li><a href="Lessons.html">Lessons</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="results.html">Results</a></li>
+                <li><a href="champions.html">Champions</a></li>
+                <li><a href="guides.html">Guides</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Organization</h4>
+              <ul>
+                <li><a href="#">Who We Are!</a></li>
+                <li><a href="#">Login and or Signup</a></li>
+                <li><a href="#">Volunteers</a></li>
+                <li><a href="#">Sponsors and Donors</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">External Links</a></li>
+                <li><a href="#">Photos</a></li>
+                <li><a href="#">Memories and Archives</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Follow Us</h4>
+              <h5>The Mississauga Chess  is a runned by Volunteer club, all money used is reinvested in the organization and therefore classifies under the T3190 regulation as not for profit</h5>
+              <h5>Subjected to Certain Conditions</h5>
+              <br>
+              <div>
+                <h5> &copy Mississauga Chess Club and Volunteers; 2023 to Present | &reg; Mississauga Chess club is a trademarked name; | Developed by Abdullah Khan; please view legal documentation for more info</h5>
+              </div>
+              <br>
+              <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-solid fa-inbox"></i></a>
+                <a href="#"><i class="fa-sharp fa-solid fa-chess-knight"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" async></script>
+      <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" async></script>
+      <script src="https://smtpjs.com/v3/smtp.js"></script>
+      <script >
+        function sendEmail(){
+          Email.send({
+           secureToken: "", //get it 
+            To : 'hello@mississaugachessclub.ca',
+            From : document.getElementById("email").value,
+            Subject : "This is the subject",
+            Body : "Name: " + document.getElementById("name").value
+            + "<br/> Email: " + document.getElementById("email").value
+            + "<br/> Phone:" + document.getElementById("phone").value
+            + " <br/> Message: " + document.getElementById("message").value
+        }).then(
+          message => alert("Message has been Sent Succesfully")
+        );
+        }
+      </script>
+    </body>
+</html>
