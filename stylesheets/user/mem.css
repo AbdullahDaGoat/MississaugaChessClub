@@ -1,0 +1,31 @@
+footer{
+    margin-top: 100rem;
+}
+
+.footer-col{
+    margin-left: -3rem;
+}
+
+.title-photos{
+    margin-top: 10rem;
+}
+
+.title-photos h1{
+    color: #fff;
+    font-size: 35px;
+    text-align: center;
+}
+
+.title-timeline h1{
+    color: black;
+    font-size: 35px;
+    text-align: center;
+}
+
+.body{
+    margin-top: 2rem;
+}
+
+body{
+    background-color: #fff;
+}
