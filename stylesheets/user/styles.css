@@ -78,6 +78,7 @@ body{
   opacity: 1;
 }
 
+
 .prev-btn, .next-btn{
   z-index: 999;
   font-size: 2em;
@@ -864,7 +865,7 @@ body{
 
 .card button {
   align-self: flex-end;
-  background-color: #f44336; /* Green */
+  background-color: #f44336; /* Red */
   border: none;
   color: white;
   padding: 15px 32px;
