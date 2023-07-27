@@ -656,6 +656,22 @@ body{
   box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
   transition: all 0.3s ease-out;
 }
+
+.wrapper-socials-biggestclub{
+  position: relative;
+  left: 8rem;
+}
+@media screen and (max-width: 1280px){
+  .wrapper-socials-biggestclub{
+    position: relative;
+    left: -5rem;
+  }
+  .chessisbig{
+    width: 80%;
+    position: relative;
+    left: 10rem;
+  }
+}
 .wrapper .button:hover{
   width: 200px;
 }
@@ -802,7 +818,6 @@ body{
 .img-wrapper:hover > .content.slide-up {
   transform: translateY(0);
 } 
-
 .announcement-grid {
   display: grid;
   margin-top: -42rem;
@@ -815,7 +830,7 @@ body{
   margin-top: 1rem;
   margin-left: 4rem;
   width: 50%;
-  background-color: #b37b3c   ; /* Green */
+  background-color: #b37b3c; /* Green */
   border: none;
   color: white;
   padding: 15px 32px;
@@ -826,14 +841,16 @@ body{
   margin: 4px 2px;
   cursor: pointer;
   -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;  
-}
-#add-event-button:hover{
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  transition-duration: 0.4s;
 }
 
-#submit{
-  background-color: #008CBA; /* Green */
+#add-event-button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+#submit {
+  background-color: #008cba; /* Green */
   border: none;
   color: white;
   padding: 15px 32px;
@@ -844,11 +861,12 @@ body{
   margin: 4px 2px;
   cursor: pointer;
   -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;  
+  transition-duration: 0.4s;
 }
 
-#submit:hover{
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+#submit:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 .hidden {
@@ -863,7 +881,7 @@ body{
   background-color: lightgrey;
 }
 
-.card button {
+.card button.delete-button {
   align-self: flex-end;
   background-color: #f44336; /* Red */
   border: none;
@@ -876,15 +894,20 @@ body{
   margin: 4px 2px;
   cursor: pointer;
   -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;  
+  transition-duration: 0.4s;
 }
 
-.card h1{
+.card button.delete-button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card h1 {
   text-align: center;
   font-size: 25px;
-} 
+}
 
-.card h2{
+.card h2 {
   font-size: 15px;
 }
 
@@ -892,11 +915,10 @@ body{
   font-size: 12px;
 }
 
-.events-name h1{
- font-size: 30px;
- background-color: white;
+.events-name h1 {
+  font-size: 30px;
+  background-color: white;
 }
-
 .accordion {
   /* border: 1px solid #ccc; */
   width: 50%;
@@ -1039,7 +1061,7 @@ h5{
 @media screen and (max-width: 860px){
   .grid {
     gap: 0px;
-    margin-left: -15px;
+    margin-left: -60px;
     grid-template-columns: repeat(2, 1fr); /* displays 2 columns with equal width */
   }
   .chessisbig{

@@ -11,13 +11,20 @@
     <link href="./stylesheets/user/guides.css" rel="stylesheet" type="text/css" />    
     <link href="./stylesheets/user/nav.css" rel="stylesheet" type="text/css" />    
     <link rel="icon" type="image/png" sizes="64x64" href="/assets/logo.gif"/>
-
+    <meta name="google-site-verification" content="XvbKOScr7pen_v1iqTNPQKmCgooVYp-1hZrBuiuv7J8" />
     <script type="text/javascript" src="./src/user/guides.js" defer></script>
     <link
     href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
     rel="stylesheet"
   />
 
+  <script>
+    // Redirect to index.html if the user is using a desktop device
+if (window.innerWidth <= 768) {
+  window.location.href = "index.html";
+  alert("Your screen size is too small. If you are on mobile, you won't be able to view this page. Please use another device or increase your screen size.");
+}
+  </script>
 </head>
 <body>
     <!-- with <a href="#home"></a> 

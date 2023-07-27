@@ -5,28 +5,49 @@ const content3 = document.getElementById("content3");
 // Buttons
 const btn1 = document.getElementById("tab-btn-1");
 const btn2 = document.getElementById("tab-btn-2");
+const btn3 = document.getElementById("tab-btn-3");
 
 
 
 btn1.addEventListener("click", function() {
   content1.style.transform = "translateX(0)";
   content2.style.display = "none";
+  content3.style.display = "none";
   btn1.style.color = "#9c5200";
   btn2.style.color = "#000";
+  btn3.style.color = "#000";
   document.getElementById("content1").classList.add("animation");
   document.getElementById("content2").classList.remove("animation");
+  document.getElementById("content3").classList.remove("animation");
   console.log("clicked")
 });
 
 
 btn2.addEventListener("click", function() {
     content1.style.display = "none";
+    content3.style.display = "none";
     content2.style.transform = "translateX(0)";
     btn2.style.color = "#aa6c26";
     btn1.style.color = "#000";
+    btn3.style.color = "#000";
     document.getElementById("content1").classList.remove("animation");
     document.getElementById("content2").classList.add("animation");
+    document.getElementById("content3").classList.remove("animation");
     console.log("clicked")
+});
+
+
+btn3.addEventListener("click", function() {
+  content1.style.display = "none";
+  content2.style.display = "none";
+  content3.style.transform = "translateX(0)";
+  btn3.style.color = "#aa6c26";
+  btn2.style.color = "#000";
+  btn1.style.color = "#000";
+  document.getElementById("content1").classList.remove("animation");
+  document.getElementById("content2").classList.remove("animation");
+  document.getElementById("content3").classList.add("animation");
+  console.log("clicked")
 });
 
 const navbar = document.querySelector('#nav');
@@ -143,6 +164,22 @@ closeButton.addEventListener('click', closeModal);
 
 
 
-// get the iframe element
+// not suitable for phone
 
+function checkScreenSize() {
+  // Get the width and height of the screen
+  var screenWidth = window.innerWidth;
+  var screenHeight = window.innerHeight;
 
+  // Set the maximum screen size for mobile devices
+  var maxMobileScreenWidth = 767; // pixels
+
+  // Check if the screen size is smaller than the maximum mobile size
+  if (screenWidth <= maxMobileScreenWidth) {
+    // Display an alert message
+    alert("Warning: This page is not optimized for small screens. Please view on a larger device.");
+  }
+}
+
+// Call the function on page load
+window.onload = checkScreenSize;

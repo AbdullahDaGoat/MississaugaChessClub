@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://kit.fontawesome.com/79f50f4d96.js" crossorigin="anonymous" defer></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css" /><link href="https://fonts.googleapis.com/css?family=Montserrat:500,700,900|Work+Sans:300" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">   
+<meta name="google-site-verification" content="XvbKOScr7pen_v1iqTNPQKmCgooVYp-1hZrBuiuv7J8" />
+<style>
+*, html{
+  box-sizing: border-box;
+  scroll-behavior: auto !important;
+}
+
+.search-container {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  border-radius: 60px;
+  transition: width 0.2s ease-in-out;
+}
+
+h2{
+  text-align: center;
+}
+
+
+
+.search-container.activesearch {
+  width: 98%;
+  box-shadow: 0 0 8px red;
+}
+
+.search-container input {
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  transform: translateY(-50%);
+  width: 80%;
+  height: 35px;
+  padding: 0 20px;
+  border: none;
+  border-radius: 2px;
+  background: none;
+  font-size: 14px;
+  visibility: hidden;
+  opacity: 0;
+  outline: none;
+  transition: visibility 0s, opacity 0.5s ease-in-out;
+}
+
+.search-container.activesearch input {
+  visibility: visible;
+  opacity: 1;
+}
+.search-container i.fa-search {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  font-size: 25px;
+  cursor: pointer;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+.highlight {
+  background-color: yellow;
+}
+
+.fixed{
+    font-family: Arial;
+    color: #000000;
+    background-color: #E8E8E8;
+    font-weight: bold;
+}
+
+td, tr{
+    padding: 3px;
+    border: 1px solid black;
+}
+
+td{
+        display: table-cell;
+        vertical-align: inherit;
+    
+}
+
+table{
+    border-collapse: collapse;
+    border: 1px solid black;
+    text-indent: initial;
+    border-spacing: 2px
+}
+</style>
+</head>
+<body>
+
+<h2>SwissSys Standings. Junior Tournament #9: Orange Section</h2>
+
+<div class="searchbar-body">
+  <div class="search-container">
+    <i class="fa fa-search"></i>
+    <input type="text" placeholder="Search Your Name, or Rating " id="myInput" onkeyup="myFunction()">
+  </div>
+<table id="myTable">
+  <tr class="header">
+    <thead>
+        <td class="fixed">#</td>
+        <td class="fixed">Place</td>
+        <td class="fixed">Name</td>
+        <td class="fixed">ID</td>
+        <td class="fixed">Rating</td>
+        <td class="fixed">Rd 1</td>
+        <td class="fixed">Rd 2</td>
+        <td class="fixed">Rd 3 </td>
+        <td class="fixed">Total</td>
+        <td class="fixed">T-1-on-1</td>
+        <td class="fixed">T-Avg-Op</td>
+    </thead>
+    <tbody><tr><td class="fixed">1</td><td class="">1-5</td><td class="name">Nathan Ma</td><td class="idnum">179155</td><td class="rating"> 342</td><td class="result">W14</td><td class="result">W11</td><td class="result">L3</td><td class="total"> 2.0</td>
+        <td class="ties">0</td><td class="ties">387</td></tr>
+        <tr><td class="fixed">2</td><td class="">&nbsp;</td><td class="name">Evan Guo</td><td class="idnum">179745</td><td class="rating"> 422</td><td class="result">W19</td><td class="result"> ---</td><td class="result">W10</td><td class="total"> 2.0</td>
+        <td class="ties">0</td><td class="ties">350</td></tr>
+        <tr><td class="fixed">3</td><td class="">&nbsp;</td><td class="name">Binyam Hailemariam</td><td class="idnum">179574</td><td class="rating"> 441</td><td class="result">W20</td><td class="result"> ---</td><td class="result">W1</td>
+        <td class="total"> 2.0</td><td class="ties">0</td><td class="ties">335.5</td></tr>
+        <tr><td class="fixed">4</td><td class="">&nbsp;</td><td class="name">Trayaksh Abhayankar B Athreya</td><td class="idnum">175908</td><td class="rating"> 394</td><td class="result">L9</td><td class="result">W23</td><td class="result">W7</td>
+        <td class="total"> 2.0</td><td class="ties">0</td><td class="ties">330</td></tr>
+        <tr><td class="fixed">5</td><td class="">&nbsp;</td><td class="name">Luke Nie</td><td class="idnum">179649</td><td class="rating"> 368</td><td class="result">W25</td><td class="result"> ---</td><td class="result">W8</td><td class="total"> 2.0</td>
+        <td class="ties">0</td><td class="ties">205</td></tr>
+        <tr><td class="fixed">6</td><td class="">6-18</td><td class="name">Kayal Manikandan</td><td class="idnum">179937</td><td class="rating"> 312</td><td class="result">L18</td><td class="result">B---</td><td class="result">L17</td>
+        <td class="total"> 1.0</td><td class="ties">0</td><td class="ties">423.5</td></tr>
+        <tr><td class="fixed">7</td><td class="">&nbsp;</td><td class="name">Andrew Wang</td><td class="idnum">179787</td><td class="rating"> 315</td><td class="result">W17</td><td class="result"> ---</td><td class="result">L4</td>
+        <td class="total"> 1.0</td><td class="ties">0</td><td class="ties">413.5</td></tr>
+        <tr><td class="fixed">8</td><td class="">&nbsp;</td><td class="name">Simar Sindhwani</td><td class="idnum">181084</td><td class="rating"> 410</td><td class="result">W22</td><td class="result"> ---</td><td class="result">L5</td>
+        <td class="total"> 1.0</td><td class="ties">0</td><td class="ties">402</td></tr>
+        <tr><td class="fixed">9</td><td class="">&nbsp;</td><td class="name">Filip Markovski</td><td class="idnum">178100</td><td class="rating"> 359</td><td class="result">W4</td><td class="result"> ---</td><td class="result"> ---</td>
+        <td class="total"> 1.0</td><td class="ties">0</td><td class="ties">394</td></tr>
+        <tr><td class="fixed">10</td><td class="">&nbsp;</td><td class="name">Sarthak Biswal</td><td class="idnum">181842</td><td class="rating"> 368</td><td class="result">U---</td><td class="result">W19</td><td class="result">L2</td>
+        <td class="total"> 1.0</td><td class="ties">0</td><td class="ties">377</td></tr>
+        <tr><td class="fixed">11</td><td class="">&nbsp;</td><td class="name">Sebastian Sur</td><td class="idnum">176325</td><td class="rating"> 341</td><td class="result">W26</td><td class="result">L1</td><td class="result"> ---</td>
+        <td class="total"> 1.0</td><td class="ties">0</td><td class="ties">358.5</td></tr>
+        <tr><td class="fixed">12</td><td class="">&nbsp;</td><td class="name">Faisal Sanshab</td><td class="idnum">179160</td><td class="rating"> 310</td><td class="result">U---</td><td class="result">U---</td><td class="result">W27</td>
+        <td class="total"> 1.0</td><td class="ties">0</td><td class="ties">340</td></tr>
+        <tr><td class="fixed">13</td><td class="">&nbsp;</td><td class="name">Denis Przybylski</td><td class="idnum">183344</td><td class="rating">unr.</td><td class="result">U---</td><td class="result">U---</td><td class="result">W19</td>
+        <td class="total"> 1.0</td><td class="ties">0</td><td class="ties">332</td></tr>
+        <tr><td class="fixed">14</td><td class="">&nbsp;</td><td class="name">Nathan Zheng</td><td class="idnum">179776</td><td class="rating"> 380</td><td class="result">L1</td><td class="result"> ---</td><td class="result">W24</td>
+        <td class="total"> 1.0</td><td class="ties">0</td><td class="ties">327.5</td></tr>
+        <tr><td class="fixed">15</td><td class="">&nbsp;</td><td class="name">Lang Kong</td><td class="idnum">177435</td><td class="rating"> 414</td><td class="result">U---</td><td class="result">U---</td><td class="result">W21</td>
+        <td class="total"> 1.0</td><td class="ties">0</td><td class="ties">321</td></tr>
+        <tr><td class="fixed">16</td><td class="">&nbsp;</td><td class="name">Janusan Kesavan</td><td class="idnum">176328</td><td class="rating"> 392</td><td class="result">U---</td><td class="result">U---</td><td class="result">W23</td>
+        <td class="total"> 1.0</td><td class="ties">0</td><td class="ties">316</td></tr>
+        <tr><td class="fixed">17</td><td class="">&nbsp;</td><td class="name">Robin Sun</td><td class="idnum">181818</td><td class="rating"> 433</td><td class="result">L7</td><td class="result"> ---</td><td class="result">W6</td><td class="total"> 1.0</td>
+        <td class="ties">0</td><td class="ties">313.5</td></tr>
+        <tr><td class="fixed">18</td><td class="">&nbsp;</td><td class="name">Amelia Cirosh</td><td class="idnum">177951</td><td class="rating"> 414</td><td class="result">W6</td><td class="result"> ---</td><td class="result"> ---</td>
+        <td class="total"> 1.0</td><td class="ties">0</td><td class="ties">312</td></tr>
+        <tr><td class="fixed">19</td><td class="">19-27</td><td class="name">Isaiah Del Rosario</td><td class="idnum">180269</td><td class="rating"> 332</td><td class="result">L2</td><td class="result">L10</td><td class="result">L13</td>
+        <td class="total"> 0.0</td><td class="ties">0</td><td class="ties">507</td></tr>
+        <tr><td class="fixed">20</td><td class="">&nbsp;</td><td class="name">Rei Ning</td><td class="idnum">179338</td><td class="rating"> 329</td><td class="result">L3</td><td class="result"> ---</td><td class="result"> ---</td><td class="total"> 0.0</td>
+        <td class="ties">0</td><td class="ties">441</td></tr>
+        <tr><td class="fixed">21</td><td class="">&nbsp;</td><td class="name">Asvanthiga Kesavan</td><td class="idnum">176329</td><td class="rating"> 321</td><td class="result">U---</td><td class="result">U---</td><td class="result">L15</td>
+        <td class="total"> 0.0</td><td class="ties">0</td><td class="ties">414</td></tr>
+        <tr><td class="fixed">22</td><td class="">&nbsp;</td><td class="name">David Martin</td><td class="idnum">177953</td><td class="rating"> 436</td><td class="result">L8</td><td class="result"> ---</td><td class="result"> ---</td>
+        <td class="total"> 0.0</td><td class="ties">0</td><td class="ties">410</td></tr>
+        <tr><td class="fixed">23</td><td class="">&nbsp;</td><td class="name">Sharjil Khurram</td><td class="idnum">182189</td><td class="rating"> 316</td><td class="result">U---</td><td class="result">L4</td><td class="result">L16</td>
+        <td class="total"> 0.0</td><td class="ties">0</td><td class="ties">393</td></tr>
+        <tr><td class="fixed">24</td><td class="">&nbsp;</td><td class="name">Parv Bhavsar</td><td class="idnum">181082</td><td class="rating"> 313</td><td class="result">U---</td><td class="result">U---</td><td class="result">L14</td>
+        <td class="total"> 0.0</td><td class="ties">0</td><td class="ties">380</td></tr>
+        <tr><td class="fixed">25</td><td class="">&nbsp;</td><td class="name">Ayaansh Supner</td><td class="idnum">183246</td><td class="rating">unr.</td><td class="result">L5</td><td class="result"> ---</td><td class="result"> ---</td>
+        <td class="total"> 0.0</td><td class="ties">0</td><td class="ties">368</td></tr>
+        <tr><td class="fixed">26</td><td class="">&nbsp;</td><td class="name">Davis Martin</td><td class="idnum">177955</td><td class="rating"> 375</td><td class="result">L11</td><td class="result"> ---</td><td class="result"> ---</td>
+        <td class="total"> 0.0</td><td class="ties">0</td><td class="ties">341</td></tr>
+        <tr><td class="fixed">27</td><td class="">&nbsp;</td><td class="name">Benjamin Ruan</td><td class="idnum">179917</td><td class="rating"> 340</td><td class="result">U---</td><td class="result">U---</td><td class="result">L12</td>
+        <td class="total"> 0.0</td><td class="ties">0</td><td class="ties">310</td></tr>
+        </tbody>
+    </table>
+<script >
+  function myFunction() {
+    var input, filter, table, tr, tdArray, txtValueArray;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable");
+    tr = table.getElementsByTagName("tr");
+    for (var i = 0; i < tr.length; i++) {
+      tdArray = tr[i].getElementsByTagName("td");
+      txtValueArray = [];
+      for (var j = 0; j < tdArray.length; j++) {
+        txtValueArray[j] = tdArray[j].textContent || tdArray[j].innerText;
+      }
+      if (txtValueArray.join(' ').toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+        for (var k = 0; k < tdArray.length; k++) {
+          var regex = new RegExp(filter, "gi");
+          tdArray[k].innerHTML = txtValueArray[k].replace(regex, '<span class="highlight">$&</span>');
+        }
+      } else {
+        tr[i].style.display = "none";
+        for (var k = 0; k < tdArray.length; k++) {
+          tdArray[k].innerHTML = txtValueArray[k];
+        }
+      }
+    }
+  }
+  const searchContainer = document.querySelector('.search-container');
+const clearBtn = document.querySelector('.clear-btn');
+const input = document.querySelector('input');
+
+searchContainer.addEventListener('click', function() {
+  searchContainer.classList.toggle('activesearch');
+  input.value = "";
+});
+
+input.addEventListener('click', function(e) {
+  e.stopPropagation();
+});
+
+  </script>
+  
+
+      
+</body>
+</html>

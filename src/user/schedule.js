@@ -1,5 +1,4 @@
 // To: Webmasters, my bad on phase two ill create a reoccuring events functionality
-
 const calendar = document.querySelector(".calendar"),
   date = document.querySelector(".date"),
   daysContainer = document.querySelector(".days"),
@@ -484,4 +483,8 @@ function convertTime(time) {
   return time;
 }
 
-
+const modal = document.querySelector(".modal")
+const closeModal = document.querySelector(".close-button")
+document.addEventListener("load", () => {
+  modal.showModal()
+})

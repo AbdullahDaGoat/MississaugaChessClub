@@ -38,3 +38,22 @@ window.addEventListener('scroll', () => {
 
 
 // Actual JS:
+const modal = document.getElementById('modal');
+const closeButton = document.querySelector('[data-close-button]');
+const overlay = document.getElementById('overlay');
+
+function openModal() {
+  modal.classList.add('active-modal');
+  overlay.classList.add('active-modal');
+}
+
+function closeModal() {
+  modal.classList.remove('active-modal');
+  overlay.classList.remove('active-modal');
+}
+
+document.addEventListener('load', () => {
+  openModal();
+});
+
+closeButton.addEventListener('click', closeModal);

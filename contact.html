@@ -14,8 +14,8 @@
     <link href="./stylesheets/user/footer.css" rel="stylesheet" type="text/css" />   
 
     <link rel="icon" type="image/png" sizes="64x64" href="/assets/logo.gif"/>
+    <script src="/src/user/script.js" async></script>
 
-    <script type="text/javascript" src="./src/user/contact.js" defer></script>
     <link
     href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
     rel="stylesheet"
@@ -112,7 +112,7 @@
             </div>
             <div class="box">
                 <div class="contact form">
-                    <form onsubmit="sendEmail(); reset(); return false; ">
+                    <form onsubmit="sendEmail();">
                       <div class="formBox">
                         <div class="row50">
                           <div class="inputBox">
@@ -153,17 +153,17 @@
                   <div class="infoBox">
                     <div>
                       <span><ion-icon name="location-outline"></ion-icon></span>
-                      <p>1444 Dundas Crescent, Mississauga, ON ( Park in the back)</p>
+                      <p>1444 Dundas Crescent, Mississauga, ON (Park in the back)</p>
                     </div>
                     <div>
                       <span><ion-icon name="mail-outline"></ion-icon></span>
-                      <a href="mailtoHello@Mississaugachessclub.ca">Hello@Mississaugachessclub.ca</a>
+                      <a href="mailto:Mississaugachessclub@gmail.com">Mississaugachessclub@gmail.com</a>
                     </div>
 
-                    <div>
+                    <!-- <div>
                       <span><ion-icon name="call-outline"></ion-icon></span>
                       <a href="tel:+14372686221"> +1(437) 268-6221</a>
-                    </div>
+                    </div> -->
 
                     <ul class="sci">
                       <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
@@ -172,23 +172,26 @@
                   </div>
                 </div>
                 <div class="contact map">
-                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2891.802313450409!2d-79.65198212512406!3d43.548162559219975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b4400636b32bb%3A0x7c55fa8bb756300!2sMississauga%20Chess%20Club!5e0!3m2!1sen!2sca!4v1688098133123!5m2!1sen!2sca" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            
+                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2891.802313450409!2d-79.65198212512406!3d43.548162559219975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b4400636b32bb%3A0x7c55fa8bb756300!2sMississauga%20Chess%20Club!5e0!3m2!1sen!2sca!4v1688098133123!5m2!1sen!2sca" style="border:0;" allowfullscreen="yes" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            
                 </div>
-            </div>
+                          </div>
         </div>
     </section>
     <!-- Volunteer with us information -->
     <section class="extrainfo">
-      <h1 class="Time">Time and Location</h1>
+      <h1 class="Time" style="padding: 20px;">Time and Location</h1>
       <br/>
       <br/>
       <h2 class="Adult">Adult Club: 6:30pm - 10:30pm Wednesday Nights</h2>
       <br/>
       <h2 class="Youth">Youth Club: 6:30pm - 9pm Monday Nights      </h2>
       <br/>
+      <h2 class="Youth">Friday Club: 6:30pm - 9:30pm Friday Nights      </h2>
+      <br/>
       <br/>
       <h2 class="Note"><strong>Please Note!!!</strong></h2>
-      <p>Registration time is between 6:30pm and 7:00pm. Games start at 7:15pm. Please ensure you arrive by 7:00pm to register your name for the night's tournament. On Wednesday if you are running late please call us before 7:00pm and ask to be paired.</p>
+      <p>Registration time is between 6:30pm and 7:00pm. Games start at 7:15pm. Please ensure you arrive by 7:00pm to register your name for the night's tournament. 
+        On Wednesday if you are running late <a href="tel:+14372686221">please call us before 7:00pm and ask to be paired.</a></p>
       <p>We would like to get home, but we cannot if all emmebers do not have a ride. So please have a ride</p>
       <br/>
       <h3>Getting Here:</h3>
@@ -199,6 +202,8 @@
       <p><strong>Walking: </strong> If you live nearby, exercise and play chess at the same time!</p>
       <br/>
       <br/>
+      <br/>
+
     </section>
     <section class="volunteer">
         <br/>
@@ -231,7 +236,7 @@
     <!-- Donors / affiliates -->
     <section class="partners">
         <div class="title-partners">
-            <h1>Our Donors / Partners</h1>
+            <h1>Sponsors / Affiliates</h1>
             <p>A <strong>Special</strong> thanks to our <em>generous</em> donors, If you would like to become a donor please contact us with the subject Partner / Donor</p>
         </div>
         <div class="donors">
@@ -301,24 +306,39 @@
             </div>
           </div>
         </div>
+        
       </footer>
+    
+
+      
       <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" async></script>
       <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" async></script>
       <script src="https://smtpjs.com/v3/smtp.js"></script>
-      <script >
-        function sendEmail(){
+      <script>
+        alert(error)
+        function sendEmail() {
           Email.send({
-           secureToken: "", //get it 
-            To : 'hello@mississaugachessclub.ca',
-            From : document.getElementById("email").value,
-            Subject : "This is the subject",
-            Body : "Name: " + document.getElementById("name").value
-            + "<br/> Email: " + document.getElementById("email").value
-            + "<br/> Phone:" + document.getElementById("phone").value
-            + " <br/> Message: " + document.getElementById("message").value
-        }).then(
-          message => alert("Message has been Sent Succesfully")
-        );
+            SecureToken: "3a9c6519-6fbc-46bd-919e-7e0ad0bbe1ed", // still dont work :(
+            To: "mississaugachessclub@gmail.com",
+            From: document.getElementById("email").value,
+            Subject: "Contact Form From MCC Website Client",
+            Body:
+              "Name: " +
+              document.getElementById("name").value +
+              "<br/> Email: " +
+              document.getElementById("email").value +
+              "<br/> Phone:" +
+              document.getElementById("phone").value +
+              "<br/> Message: " +
+              document.getElementById("message").value,
+          })
+            .then((response) => {
+              alert("Message has been Sent Succesfully");
+              console.log(response);
+            })
+            .catch((error) => {
+              alert("Error: " + error.message);
+            });
         }
       </script>
     </body>

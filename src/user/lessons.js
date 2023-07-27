@@ -123,5 +123,4 @@ const closeNav = () => {
 
 };
 
-document.querySelector('.menu').addEventListener('click', openNav);
-document.querySelector('.close').addEventListener('click', closeNav);
+

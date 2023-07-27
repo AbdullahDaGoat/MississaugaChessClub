@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://kit.fontawesome.com/79f50f4d96.js" crossorigin="anonymous" defer></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css" /><link href="https://fonts.googleapis.com/css?family=Montserrat:500,700,900|Work+Sans:300" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">   
+<meta name="google-site-verification" content="XvbKOScr7pen_v1iqTNPQKmCgooVYp-1hZrBuiuv7J8" />
+<style>
+*, html{
+  box-sizing: border-box;
+  scroll-behavior: auto !important;
+}
+
+.search-container {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  border-radius: 60px;
+  transition: width 0.2s ease-in-out;
+}
+
+h2{
+  text-align: center;
+}
+
+
+
+.search-container.activesearch {
+  width: 98%;
+  box-shadow: 0 0 8px red;
+}
+
+.search-container input {
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  transform: translateY(-50%);
+  width: 80%;
+  height: 35px;
+  padding: 0 20px;
+  border: none;
+  border-radius: 2px;
+  background: none;
+  font-size: 14px;
+  visibility: hidden;
+  opacity: 0;
+  outline: none;
+  transition: visibility 0s, opacity 0.5s ease-in-out;
+}
+
+.search-container.activesearch input {
+  visibility: visible;
+  opacity: 1;
+}
+.search-container i.fa-search {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  font-size: 25px;
+  cursor: pointer;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+.highlight {
+  background-color: yellow;
+}
+
+.fixed{
+    font-family: Arial;
+    color: #000000;
+    background-color: #E8E8E8;
+    font-weight: bold;
+}
+
+td, tr{
+    padding: 3px;
+    border: 1px solid black;
+}
+
+td{
+        display: table-cell;
+        vertical-align: inherit;
+    
+}
+
+table{
+    border-collapse: collapse;
+    border: 1px solid black;
+    text-indent: initial;
+    border-spacing: 2px
+}
+</style>
+</head>
+<body>
+
+<h2>SwissSys Standings. Junior Tournament #9: MCC White Section</h2>
+
+<div class="searchbar-body">
+  <div class="search-container">
+    <i class="fa fa-search"></i>
+    <input type="text" placeholder="Search Your Name, or Rating " id="myInput" onkeyup="myFunction()">
+  </div>
+<table id="myTable">
+  <tr class="header">
+    <thead>
+        <td class="fixed">#</td>
+        <td class="fixed">Place</td>
+        <td class="fixed">Name</td>
+        <td class="fixed">ID</td>
+        <td class="fixed">Rating</td>
+        <td class="fixed">Rd 1</td>
+        <td class="fixed">Rd 2</td>
+        <td class="fixed">Rd 3 </td>
+        <td class="fixed">Total</td>
+    </thead>
+    <tbody><tr><td class="fixed">1</td><td class="">1</td><td class="name">Niralya Vivek</td><td class="idnum">180183</td><td class="rating"> 200</td><td class="result">W19</td><td class="result">W18</td><td class="result">W3</td><td class="total"> 3.0</td>
+    </tr>
+    <tr><td class="fixed">2</td><td class="">2-5</td><td class="name">Benjamin Neimarlija</td><td class="idnum">180224</td><td class="rating"> 290</td><td class="result">W10</td><td class="result"> ---</td><td class="result">W18</td>
+    <td class="total"> 2.0</td></tr>
+    <tr><td class="fixed">3</td><td class="">&nbsp;</td><td class="name">Hazel Luong</td><td class="idnum">182369</td><td class="rating"> 200</td><td class="result">B---</td><td class="result">W4</td><td class="result">L1</td><td class="total"> 2.0</td>
+    </tr>
+    <tr><td class="fixed">4</td><td class="">&nbsp;</td><td class="name">Laurel Ma</td><td class="idnum">179153</td><td class="rating"> 299</td><td class="result">W26</td><td class="result">L3</td><td class="result">W9</td><td class="total"> 2.0</td>
+    </tr>
+    <tr><td class="fixed">5</td><td class="">&nbsp;</td><td class="name">Nathan Ren</td><td class="idnum">177469</td><td class="rating"> 279</td><td class="result">W27</td><td class="result"> ---</td><td class="result">W6</td><td class="total"> 2.0</td>
+    </tr>
+    <tr><td class="fixed">6</td><td class="">6-22</td><td class="name">Hannah Luong</td><td class="idnum">182370</td><td class="rating"> 200</td><td class="result">L14</td><td class="result">B---</td><td class="result">L5</td><td class="total"> 1.0</td>
+    </tr>
+    <tr><td class="fixed">7</td><td class="">&nbsp;</td><td class="name">Gabriel Alejandro Garcia Pena</td><td class="idnum">182201</td><td class="rating"> 214</td><td class="result">L11</td><td class="result">W19</td><td class="result"> ---</td>
+    <td class="total"> 1.0</td></tr>
+    <tr><td class="fixed">8</td><td class="">&nbsp;</td><td class="name">Jihoo Kim</td><td class="idnum">181714</td><td class="rating"> 200</td><td class="result">W33</td><td class="result"> ---</td><td class="result"> ---</td>
+    <td class="total"> 1.0</td></tr>
+    <tr><td class="fixed">9</td><td class="">&nbsp;</td><td class="name">Aaron Misquith</td><td class="idnum">179301</td><td class="rating"> 254</td><td class="result">U---</td><td class="result">W25</td><td class="result">L4</td>
+    <td class="total"> 1.0</td></tr>
+    <tr><td class="fixed">10</td><td class="">&nbsp;</td><td class="name">Daniel Losev</td><td class="idnum">177434</td><td class="rating"> 288</td><td class="result">L2</td><td class="result"> ---</td><td class="result">W27</td>
+    <td class="total"> 1.0</td></tr>
+    <tr><td class="fixed">11</td><td class="">&nbsp;</td><td class="name">Cole Hawkins</td><td class="idnum">179612</td><td class="rating"> 294</td><td class="result">W7</td><td class="result"> ---</td><td class="result"> ---</td>
+    <td class="total"> 1.0</td></tr>
+    <tr><td class="fixed">12</td><td class="">&nbsp;</td><td class="name">Lang Yi Li</td><td class="idnum">163815</td><td class="rating"> 244</td><td class="result">W25</td><td class="result"> ---</td><td class="result"> ---</td>
+    <td class="total"> 1.0</td></tr>
+    <tr><td class="fixed">13</td><td class="">&nbsp;</td><td class="name">Ahmed Yousuf</td><td class="idnum">183675</td><td class="rating">unr.</td><td class="result">U---</td><td class="result">U---</td><td class="result">W25</td>
+    <td class="total"> 1.0</td></tr>
+    <tr><td class="fixed">14</td><td class="">&nbsp;</td><td class="name">Haochen Lin</td><td class="idnum">179166</td><td class="rating"> 262</td><td class="result">W6</td><td class="result"> ---</td><td class="result"> ---</td>
+    <td class="total"> 1.0</td></tr>
+    <tr><td class="fixed">15</td><td class="">&nbsp;</td><td class="name">Rajvee Mehta</td><td class="idnum">176780</td><td class="rating"> 212</td><td class="result">W31</td><td class="result"> ---</td><td class="result"> ---</td>
+    <td class="total"> 1.0</td></tr>
+    <tr><td class="fixed">16</td><td class="">&nbsp;</td><td class="name">Eeshan Pratap Nagati</td><td class="idnum">181848</td><td class="rating"> 200</td><td class="result">W23</td><td class="result"> ---</td><td class="result"> ---</td>
+    <td class="total"> 1.0</td></tr>
+    <tr><td class="fixed">17</td><td class="">&nbsp;</td><td class="name">Bojin Tan</td><td class="idnum">180229</td><td class="rating"> 200</td><td class="result">W34</td><td class="result"> ---</td><td class="result"> ---</td>
+    <td class="total"> 1.0</td></tr>
+    <tr><td class="fixed">18</td><td class="">&nbsp;</td><td class="name">Christina Fedora Anto</td><td class="idnum">182195</td><td class="rating"> 223</td><td class="result">W29</td><td class="result">L1</td><td class="result">L2</td>
+    <td class="total"> 1.0</td></tr>
+    <tr><td class="fixed">19</td><td class="">&nbsp;</td><td class="name">Sanjana Sankar</td><td class="idnum">180175</td><td class="rating"> 227</td><td class="result">L1</td><td class="result">L7</td><td class="result">W28</td>
+    <td class="total"> 1.0</td></tr>
+    <tr><td class="fixed">20</td><td class="">&nbsp;</td><td class="name">Cyril Ilmeida</td><td class="idnum">169283</td><td class="rating"> 215</td><td class="result">U---</td><td class="result">U---</td><td class="result">W30</td>
+    <td class="total"> 1.0</td></tr>
+    <tr><td class="fixed">21</td><td class="">&nbsp;</td><td class="name">Shea Avery</td><td class="idnum">180597</td><td class="rating"> 208</td><td class="result">U---</td><td class="result">U---</td><td class="result">W32</td>
+    <td class="total"> 1.0</td></tr>
+    <tr><td class="fixed">22</td><td class="">&nbsp;</td><td class="name">Aaditri Sadhukhan</td><td class="idnum">179940</td><td class="rating"> 200</td><td class="result">U---</td><td class="result">U---</td><td class="result">W35</td>
+    <td class="total"> 1.0</td></tr>
+    <tr><td class="fixed">23</td><td class="">23-24</td><td class="name">Dhruvah Pallipuram</td><td class="idnum">183121</td><td class="rating"> 200</td><td class="result">L16</td><td class="result"> ---</td><td class="result">D24</td>
+    <td class="total"> 0.5</td></tr>
+    <tr><td class="fixed">24</td><td class="">&nbsp;</td><td class="name">Gabriel Cicconi</td><td class="idnum">183695</td><td class="rating">unr.</td><td class="result">U---</td><td class="result">U---</td><td class="result">D23</td>
+    <td class="total"> 0.5</td></tr>
+    <tr><td class="fixed">25</td><td class="">25-35</td><td class="name">Ethan Jankowski</td><td class="idnum">177827</td><td class="rating"> 213</td><td class="result">L12</td><td class="result">L9</td><td class="result">L13</td>
+    <td class="total"> 0.0</td></tr>
+    <tr><td class="fixed">26</td><td class="">&nbsp;</td><td class="name">Saron Hailemariam</td><td class="idnum">179942</td><td class="rating"> 218</td><td class="result">L4</td><td class="result"> ---</td><td class="result"> ---</td>
+    <td class="total"> 0.0</td></tr>
+    <tr><td class="fixed">27</td><td class="">&nbsp;</td><td class="name">Gurbani Sindhwani</td><td class="idnum">181085</td><td class="rating"> 200</td><td class="result">L5</td><td class="result"> ---</td><td class="result">L10</td>
+    <td class="total"> 0.0</td></tr>
+    <tr><td class="fixed">28</td><td class="">&nbsp;</td><td class="name">Arham Shah</td><td class="idnum">183674</td><td class="rating">unr.</td><td class="result">U---</td><td class="result">U---</td><td class="result">L19</td>
+    <td class="total"> 0.0</td></tr>
+    <tr><td class="fixed">29</td><td class="">&nbsp;</td><td class="name">Sanderson Yui</td><td class="idnum">186442</td><td class="rating">unr.</td><td class="result">L18</td><td class="result"> ---</td><td class="result"> ---</td>
+    <td class="total"> 0.0</td></tr>
+    <tr><td class="fixed">30</td><td class="">&nbsp;</td><td class="name">Nishita Vikas Nagtilak</td><td class="idnum">183742</td><td class="rating">unr.</td><td class="result">U---</td><td class="result">U---</td><td class="result">L20</td>
+    <td class="total"> 0.0</td></tr>
+    <tr><td class="fixed">31</td><td class="">&nbsp;</td><td class="name">Mokshith Nagati</td><td class="idnum">181849</td><td class="rating"> 200</td><td class="result">L15</td><td class="result"> ---</td><td class="result"> ---</td>
+    <td class="total"> 0.0</td></tr>
+    <tr><td class="fixed">32</td><td class="">&nbsp;</td><td class="name">Atharv Srivastava</td><td class="idnum">183325</td><td class="rating">unr.</td><td class="result">U---</td><td class="result">U---</td><td class="result">L21</td>
+    <td class="total"> 0.0</td></tr>
+    <tr><td class="fixed">33</td><td class="">&nbsp;</td><td class="name">Dalen Martin</td><td class="idnum">177954</td><td class="rating"> 260</td><td class="result">L8</td><td class="result"> ---</td><td class="result"> ---</td>
+    <td class="total"> 0.0</td></tr>
+    <tr><td class="fixed">34</td><td class="">&nbsp;</td><td class="name">Ari Samtani</td><td class="idnum">182186</td><td class="rating"> 200</td><td class="result">L17</td><td class="result"> ---</td><td class="result"> ---</td>
+    <td class="total"> 0.0</td></tr>
+    <tr><td class="fixed">35</td><td class="">&nbsp;</td><td class="name">Rudra Bhosale</td><td class="idnum">183245</td><td class="rating">unr.</td><td class="result">U---</td><td class="result">U---</td><td class="result">L22</td>
+    <td class="total"> 0.0</td></tr>
+    </tbody>
+    </table>
+<script >
+  function myFunction() {
+    var input, filter, table, tr, tdArray, txtValueArray;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable");
+    tr = table.getElementsByTagName("tr");
+    for (var i = 0; i < tr.length; i++) {
+      tdArray = tr[i].getElementsByTagName("td");
+      txtValueArray = [];
+      for (var j = 0; j < tdArray.length; j++) {
+        txtValueArray[j] = tdArray[j].textContent || tdArray[j].innerText;
+      }
+      if (txtValueArray.join(' ').toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+        for (var k = 0; k < tdArray.length; k++) {
+          var regex = new RegExp(filter, "gi");
+          tdArray[k].innerHTML = txtValueArray[k].replace(regex, '<span class="highlight">$&</span>');
+        }
+      } else {
+        tr[i].style.display = "none";
+        for (var k = 0; k < tdArray.length; k++) {
+          tdArray[k].innerHTML = txtValueArray[k];
+        }
+      }
+    }
+  }
+  const searchContainer = document.querySelector('.search-container');
+const clearBtn = document.querySelector('.clear-btn');
+const input = document.querySelector('input');
+
+searchContainer.addEventListener('click', function() {
+  searchContainer.classList.toggle('activesearch');
+  input.value = "";
+});
+
+input.addEventListener('click', function(e) {
+  e.stopPropagation();
+});
+
+  </script>
+  
+
+      
+</body>
+</html>

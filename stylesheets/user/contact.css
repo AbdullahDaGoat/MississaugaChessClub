@@ -27,9 +27,86 @@ footer{
     font-family: sans-serif;
 }
 .extrainfo{
-    background-color: #FF0000;
+    background-color: #f1e7dc;
     color: black;
 }
+
+.extrainfo h2, h3, p{
+    margin: 10px;
+}
+
+
+
+  
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 1000000000000;
+    background-color: white;
+    width: 500px;
+    max-width: 80%;
+  }
+  
+  .modal.active-modal {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .modal-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+  }
+  
+  .modal-header .title {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .modal-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .modal-body {
+    padding: 10px 15px;
+  }
+  
+  #overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+  }
+  
+  #overlay.active-modal {
+    opacity: 1;
+    pointer-events: all;
+  }
+  
+  .popup-ul{
+    margin-left: 2rem;
+    list-style: disc;
+  }
+
+
+
+
 .email-us{
     background-color: #aa6c26;
     margin-top: 10rem;
@@ -340,3 +417,4 @@ li {
         padding: 30px
     }
 }
+

@@ -1,6 +1,6 @@
 const modal = document.getElementById('modal');
 const closeButton = document.querySelector('[data-close-button]');
-
+const overlay = document.getElementById('overlay');
 function openModal() {
   modal.classList.add('active-modal');
   overlay.classList.add('active-modal');
@@ -15,6 +15,10 @@ window.addEventListener('load', () => {
   openModal();
 });
 
+const selectElement = (element) => document.querySelector(element);
+selectElement('.menu-icons').addEventListener('click', () =>{
+          selectElement('nav').classList.toggle('active-nav');
+})
 
 
 // Get the navbar and banner elements
@@ -44,6 +48,7 @@ window.addEventListener('scroll', () => {
     navbar.classList.add('show');
     header.classList.remove('color');
     banner.classList.remove('hidden');
+    console.log(banner.classList.remove("hidden"))
   }
 
   // Update the previous scroll position
@@ -87,5 +92,32 @@ var swiper = new Swiper(".mySwiper", {
   pagination: {
     el: ".swiper-pagination",
   },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 });
 
+
+const steps = document.querySelectorAll("#submit-to-google-sheet > div");
+const nextButtons = document.querySelectorAll(".next-button");
+let currentStep = 0;
+
+nextButtons.forEach((button) => {
+  button.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    // Hide the current step
+    steps[currentStep].style.display = "none";
+
+    // Show the next step
+    currentStep++;
+    steps[currentStep].style.display = "block";
+
+    // Clear the input of the previous step
+    // const inputs = steps[currentStep - 1].querySelectorAll("input, textarea");
+    // inputs.forEach((input) => {
+    //   input.value = "";
+    // });
+  });
+});

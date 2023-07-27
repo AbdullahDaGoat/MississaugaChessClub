@@ -122,6 +122,13 @@
   transition: 0.3s ease-in-out;
 }
 
+.tabs-3{
+  width: 40%;
+  justify-content: center;
+  place-items: center;
+  text-align: center;
+}
+
 .tabs__head {
   display: flex;
   align-items: center;
@@ -269,6 +276,10 @@ iframe{
   display: block;
 }
 
+.highlight {
+  background-color: yellow;
+}
+
 /* Define a parent container for the footer */
 
 .container-footer {
@@ -305,7 +316,7 @@ iframe{
     transition: 0.3s ease-in-out;
   }
 
-  #content1{
+  #content1, #content2, #content3{
     margin-left: 18rem;
     width: 150vw
   }
@@ -331,7 +342,7 @@ iframe{
 
 @media screen and (max-width: 574px){
 
-  #content1{
+  #content1, #content2, #content3{
     margin-left: 2rem;
     width: 150vw
   }

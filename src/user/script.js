@@ -152,16 +152,109 @@ input.addEventListener('click', function(e) {
   e.stopPropagation();
 });
 
+// const addEventButton = document.getElementById('add-event-button');
+// const eventForm = document.getElementById('event-form');
+// const eventFormContainer = document.getElementById('event-form-container');
+// const announcementContainer = document.getElementById('announcement-container');
+// const deleteButtons = document.getElementsByClassName('delete-button');
+
+// // Hide the "Delete Event" buttons by default
+// Array.prototype.forEach.call(deleteButtons, function(button) {
+//   button.classList.add('hidden');
+// });
+
+// // Retrieve events from local storage on page load
+// window.addEventListener('load', () => {
+//   const events = JSON.parse(localStorage.getItem('events')) || [];
+//   events.forEach(event => {
+//     const card = createEventCard(event.title, event.description, event.location, event.date);
+//     announcementContainer.appendChild(card);
+//   });
+//   const isAdmin = JSON.parse(sessionStorage.getItem('isAdmin')) || false;
+//   if (isAdmin) {
+//     Array.prototype.forEach.call(deleteButtons, function(button) {
+//       button.classList.remove('hidden');
+//     });
+//   }
+// });
 
 
-// Check for existing events in local storage
+// addEventButton.addEventListener('click', (e) => {
+//   const password = prompt('Please enter password:');
+//   const confirmPassword = config.passcode;
+//   if (password !== confirmPassword) {
+//     return;
+//   }
+//   sessionStorage.setItem('isAdmin', true);
+//   Array.prototype.forEach.call(deleteButtons, function(button) {
+//     button.classList.remove('hidden');
+//   });
+//   eventFormContainer.classList.remove('hidden');
+//   addEventButton.classList.add('hidden');
+// });
+
+
+
+
+
+// announcementContainer.addEventListener('click', (e) => {
+//   if (e.target.classList.contains('delete-button')) {
+//     const isAdmin = JSON.parse(sessionStorage.getItem('isAdmin')) || false;
+//     if (!isAdmin) {
+//       const password = prompt('Please enter password:');
+//       const confirmPassword = config.passcode;
+//       if (password !== confirmPassword) {
+//         return;
+//       }
+//       sessionStorage.setItem('isAdmin', true);
+//       Array.prototype.forEach.call(deleteButtons, function(button) {
+//         button.classList.remove('hidden');
+//       });
+//     }
+//     const card = e.target.parentNode;
+//     announcementContainer.removeChild(card);
+//     // Remove event from local storage
+//     const events = JSON.parse(localStorage.getItem('events')) || [];
+//     const title = card.querySelector('h1').textContent;
+//     const filteredEvents = events.filter(event => event.title !== title);
+//     localStorage.removeItem('events', JSON.stringify(filteredEvents));
+//   }
+// });
+
+
+// function createEventCard(title, description, location, date) {
+//   const card = document.createElement('div');
+//   card.classList.add('card');
+//   card.innerHTML = `
+//     <h1>${title}</h1>
+//     <h2>${description}</h2>
+//     <p>${location}</p>
+//     <p>${date}</p>
+//     <button class="delete-button hidden">Delete Event</button>
+//   `;
+//   const isAdmin = JSON.parse(sessionStorage.getItem('isAdmin')) || false;
+//   if (isAdmin) {
+//     card.querySelector('.delete-button').classList.remove('hidden');
+//   }
+//   return card;
+// }
+
+
+
+let isAdmin = false;
 const addEventButton = document.getElementById('add-event-button');
 const eventForm = document.getElementById('event-form');
 const eventFormContainer = document.getElementById('event-form-container');
 const announcementContainer = document.getElementById('announcement-container');
+const deleteButtons = document.getElementsByClassName('delete-button');
 
-// Retrieve events from local storage on page load
+// Hide the "Delete Event" buttons by default
+Array.prototype.forEach.call(deleteButtons, function(button) {
+  button.classList.add('hidden');
+});
+
 window.addEventListener('load', () => {
+  // Retrieve events from local storage on page load
   const events = JSON.parse(localStorage.getItem('events')) || [];
   events.forEach(event => {
     const card = createEventCard(event.title, event.description, event.location, event.date);
@@ -169,17 +262,17 @@ window.addEventListener('load', () => {
   });
 });
 
-
 addEventButton.addEventListener('click', (e) => {
   const password = prompt('Please enter password:');
-  const confirmPassword = config.passcode
+  const confirmPassword = config.passcode;
   if (password !== confirmPassword) {
     return;
   }
+  isAdmin = true;
+  showDeleteButtons();
   eventFormContainer.classList.remove('hidden');
   addEventButton.classList.add('hidden');
 });
-
 
 eventForm.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -196,25 +289,24 @@ eventForm.addEventListener('submit', (e) => {
   const events = JSON.parse(localStorage.getItem('events')) || [];
   events.push({ title, description, location, date });
   localStorage.setItem('events', JSON.stringify(events));
+  // Add the delete button to the newly created card if user is an admin
+  if (isAdmin) {
+    card.querySelector('.delete-button').classList.remove('hidden');
+  }
 });
 
+
 announcementContainer.addEventListener('click', (e) => {
-  if (e.target.classList.contains('delete-button')) {
-    const password = prompt('Please enter password:');
-    const confirmPassword = config.passcode
-    if (password !== confirmPassword) {
-      return;
-    }
+  if (e.target.classList.contains('delete-button') && isAdmin) {
     const card = e.target.parentNode;
     announcementContainer.removeChild(card);
     // Remove event from local storage
     const events = JSON.parse(localStorage.getItem('events')) || [];
     const title = card.querySelector('h1').textContent;
     const filteredEvents = events.filter(event => event.title !== title);
-    localStorage.removeItem('events', JSON.stringify(filteredEvents));
+    localStorage.setItem('events', JSON.stringify(filteredEvents));
   }
 });
-
 
 function createEventCard(title, description, location, date) {
   const card = document.createElement('div');
@@ -224,10 +316,18 @@ function createEventCard(title, description, location, date) {
     <h2>${description}</h2>
     <p>${location}</p>
     <p>${date}</p>
-    <button class="delete-button">Delete Event</button>
+    <button class="delete-button hidden">Delete Event</button>
   `;
   return card;
 }
+
+function showDeleteButtons() {
+  Array.prototype.forEach.call(deleteButtons, function(button) {
+    button.classList.remove('hidden');
+  });
+}
+
+
 
 const accordionTitle = document.querySelector('.accordion-title');
 const arrow = document.querySelector('.arrow');
@@ -238,3 +338,15 @@ accordionTitle.addEventListener('click', () => {
   accordionContent.classList.toggle('show-lol');
 });
 
+// Save events to server
+window.addEventListener('beforeunload', () => {
+  const events = JSON.parse(localStorage.getItem('events')) || [];
+  fetch('/events', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(events)
+  }).catch(error => console.error(error));
+});
+// ...existing code...

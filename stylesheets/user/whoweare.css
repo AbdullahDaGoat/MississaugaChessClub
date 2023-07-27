@@ -262,6 +262,8 @@ a{
     justify-content: center;
     align-items: center;
 }
+
+
 .team-social a{
     margin: 0px 5px;
     color: #ffffff;
@@ -308,6 +310,12 @@ a{
   @media(max-width:300px){
     .t-s-img{
         height: 280px;
+    }
+  }
+
+  @media (max-width: 1015px){
+    .links-other{
+      margin-left: 2rem;
     }
   }
   
@@ -402,4 +410,47 @@ span:hover{
 
 button{
     text-wrap: nowrap
+}
+
+
+input[type="email"],
+input[type="text"],
+input[type="date"],
+input[type="tel"],
+textarea {
+  border: unset;
+  background-color: var(--input-background);
+  padding: 15px;
+  font-size: 14px;
+  border-radius: 50px;
+  width: 250px;
+}
+
+.next-button {
+  background-color: var(--button-background);
+  color: #fff;
+  border: unset;
+  width: 155px;
+  padding: 15px;
+  border-radius: 50px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.next-button:hover {
+  background-color: #ff5500;
+  transform: scale(1.1);
+}
+
+textarea {
+  width: 250px;
+  resize: none;
+}
+
+input:focus,
+.footer-newsletter:focus,
+textarea:focus 
+{
+  outline: none;
 }

@@ -1,0 +1,1800 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://kit.fontawesome.com/79f50f4d96.js" crossorigin="anonymous" defer></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css" /><link href="https://fonts.googleapis.com/css?family=Montserrat:500,700,900|Work+Sans:300" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">   
+<meta name="google-site-verification" content="XvbKOScr7pen_v1iqTNPQKmCgooVYp-1hZrBuiuv7J8" />
+<style>
+*, html{
+  box-sizing: border-box;
+  scroll-behavior: auto !important;
+}
+
+.search-container {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  border-radius: 60px;
+  transition: width 0.2s ease-in-out;
+}
+
+h2{
+  text-align: center;
+}
+
+
+
+.search-container.activesearch {
+  width: 98%;
+  box-shadow: 0 0 8px red;
+}
+
+.search-container input {
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  transform: translateY(-50%);
+  width: 80%;
+  height: 35px;
+  padding: 0 20px;
+  border: none;
+  border-radius: 2px;
+  background: none;
+  font-size: 14px;
+  visibility: hidden;
+  opacity: 0;
+  outline: none;
+  transition: visibility 0s, opacity 0.5s ease-in-out;
+}
+
+.search-container.activesearch input {
+  visibility: visible;
+  opacity: 1;
+}
+.search-container i.fa-search {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  font-size: 25px;
+  cursor: pointer;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+.highlight {
+  background-color: yellow;
+}
+
+.fixed{
+    font-family: Arial;
+    color: #000000;
+    background-color: #E8E8E8;
+    font-weight: bold;
+}
+
+td, tr{
+    padding: 3px;
+    border: 1px solid black;
+}
+
+td{
+        display: table-cell;
+        vertical-align: inherit;
+    
+}
+
+table{
+    border-collapse: collapse;
+    border: 1px solid black;
+    text-indent: initial;
+    border-spacing: 2px
+}
+</style>
+</head>
+<body>
+
+<h2>2023-07-21 Friday Rapid Tournament Rd 4</h2>
+
+<div class="searchbar-body">
+  <div class="search-container">
+    <i class="fa fa-search"></i>
+    <input type="text" placeholder="Search bar out of order :(" id="myInput" onkeyup="myFunction()">
+  </div>
+  <table class="s1" border="0">
+    <tbody><tr class="g1b">
+    <td width="6%" align="right"><b>Rank</b></td>
+    <td width="6%" align="right"><b>SNo.</b></td>
+    <td width="29%"><b>Name</b></td>
+    <td width="5%" align="center"><b>FED</b></td>
+    <td colspan="3" width="3%" align="center"><b>1.Rd.</b></td>
+    <td colspan="3" width="3%" align="center"><b>2.Rd.</b></td>
+    <td colspan="3" width="3%" align="center"><b>3.Rd.</b></td>
+    <td colspan="3" width="3%" align="center"><b>4.Rd.</b></td>
+    <td width="4%" align="center"><b>Pts</b></td>
+    <td width="5%" align="center"><b>Res.</b></td>
+    <td width="5%" align="center"><b>Vict</b></td>
+    <td width="5%" align="center"><b>BH.</b></td>
+    <td width="4%" align="center"><b>BH.</b></td>
+    <td width="5%" align="center"><b>SB</b></td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">1</td>
+    <td width="6%" align="right">28</td>
+    <td width="29%">Sico Raphael</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">50</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">8</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">5</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">4</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">1</td>
+    <td width="4%" align="center">4</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">4</td>
+    <td width="5%" align="center">10</td>
+    <td width="4%" align="center">8½</td>
+    <td width="5%" align="center">8.50</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">2</td>
+    <td width="6%" align="right">38</td>
+    <td width="29%">Zhang Tyler</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">52</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">18</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">3</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">½</td>
+    <td width="3%" align="center">13</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">1</td>
+    <td width="4%" align="center">3½</td>
+    <td width="5%" align="center">½</td>
+    <td width="5%" align="center">3</td>
+    <td width="5%" align="center">10</td>
+    <td width="4%" align="center">8½</td>
+    <td width="5%" align="center">6.25</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">3</td>
+    <td width="6%" align="right">6</td>
+    <td width="29%">Chan Justin</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">47</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">14</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">2</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">½</td>
+    <td width="3%" align="center">9</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">1</td>
+    <td width="4%" align="center">3½</td>
+    <td width="5%" align="center">½</td>
+    <td width="5%" align="center">3</td>
+    <td width="5%" align="center">8½</td>
+    <td width="4%" align="center">8</td>
+    <td width="5%" align="center">6.25</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">4</td>
+    <td width="6%" align="right">27</td>
+    <td width="29%">Si Ethan</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">39</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">19</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">10</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">1</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">0</td>
+    <td width="4%" align="center">3</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">3</td>
+    <td width="5%" align="center">10½</td>
+    <td width="4%" align="center">8½</td>
+    <td width="5%" align="center">5.50</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">5</td>
+    <td width="6%" align="right">4</td>
+    <td width="29%">Bhargav Natarajan</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">44</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">17</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">1</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">14</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">1</td>
+    <td width="4%" align="center">3</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">3</td>
+    <td width="5%" align="center">9½</td>
+    <td width="4%" align="center">8½</td>
+    <td width="5%" align="center">4.50</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">6</td>
+    <td width="6%" align="right">31</td>
+    <td width="29%">Tian Raymond</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">30</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">15</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">26</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="4%" align="center">3</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">3</td>
+    <td width="5%" align="center">9</td>
+    <td width="4%" align="center">8</td>
+    <td width="5%" align="center">4.50</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">7</td>
+    <td width="6%" align="right">21</td>
+    <td width="29%">Pinilla Nicolas</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">56</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">16</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">8</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">½</td>
+    <td width="4%" align="center">2½</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">2</td>
+    <td width="5%" align="center">10</td>
+    <td width="4%" align="center">8½</td>
+    <td width="5%" align="center">3.25</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">8</td>
+    <td width="6%" align="right">35</td>
+    <td width="29%">Vasquez Meliisa</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">51</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">1</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">27</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">7</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">½</td>
+    <td width="4%" align="center">2½</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">2</td>
+    <td width="5%" align="center">9½</td>
+    <td width="4%" align="center">9</td>
+    <td width="5%" align="center">2.75</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">9</td>
+    <td width="6%" align="right">33</td>
+    <td width="29%">Trippen William</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">28</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">11</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">½</td>
+    <td width="3%" align="center">30</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">3</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">0</td>
+    <td width="4%" align="center">2½</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">2</td>
+    <td width="5%" align="center">9</td>
+    <td width="4%" align="center">8</td>
+    <td width="5%" align="center">3.75</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">10</td>
+    <td width="6%" align="right">41</td>
+    <td width="29%">Khrustalev Oleg</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">60</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">25</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">4</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">12</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">½</td>
+    <td width="4%" align="center">2½</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">2</td>
+    <td width="5%" align="center">9</td>
+    <td width="4%" align="center">7½</td>
+    <td width="5%" align="center">3.25</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">11</td>
+    <td width="6%" align="right">22</td>
+    <td width="29%">Ramkumar Krithik</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">57</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">9</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">½</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">28</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">1</td>
+    <td width="4%" align="center">2½</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">2</td>
+    <td width="5%" align="center">8½</td>
+    <td width="4%" align="center">7</td>
+    <td width="5%" align="center">2.75</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">12</td>
+    <td width="6%" align="right">12</td>
+    <td width="29%">Ha Ryan</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">14</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">48</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">19</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">10</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">½</td>
+    <td width="4%" align="center">2½</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">2</td>
+    <td width="5%" align="center">7½</td>
+    <td width="4%" align="center">6½</td>
+    <td width="5%" align="center">3.25</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">13</td>
+    <td width="6%" align="right">16</td>
+    <td width="29%">Khrustalev Aleksandr</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">26</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">½</td>
+    <td width="3%" align="center">58</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">55</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">2</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">0</td>
+    <td width="4%" align="center">2½</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">2</td>
+    <td width="5%" align="center">7½</td>
+    <td width="4%" align="center">6½</td>
+    <td width="5%" align="center">0.75</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">14</td>
+    <td width="6%" align="right">32</td>
+    <td width="29%">Trippen Christine</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">12</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">3</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">32</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">5</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">0</td>
+    <td width="4%" align="center">2</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">2</td>
+    <td width="5%" align="center">10½</td>
+    <td width="4%" align="center">9</td>
+    <td width="5%" align="center">3.50</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">15</td>
+    <td width="6%" align="right">17</td>
+    <td width="29%">Li Tianyi</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">24</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">6</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">31</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="4%" align="center">2</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">2</td>
+    <td width="5%" align="center">10½</td>
+    <td width="4%" align="center">8½</td>
+    <td width="5%" align="center">3.00</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">16</td>
+    <td width="6%" align="right">34</td>
+    <td width="29%">Tweedle Luke</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">63</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">7</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">20</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="4%" align="center">2</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">2</td>
+    <td width="5%" align="center">10</td>
+    <td width="4%" align="center">8½</td>
+    <td width="5%" align="center">2.00</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">17</td>
+    <td width="6%" align="right">29</td>
+    <td width="29%">Suschenko Zachary</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">61</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">5</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">34</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="4%" align="center">2</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">2</td>
+    <td width="5%" align="center">9½</td>
+    <td width="4%" align="center">8</td>
+    <td width="5%" align="center">1.00</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">18</td>
+    <td width="6%" align="right">25</td>
+    <td width="29%">Sarangan Ajaey Karthick</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">58</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">2</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">26</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">1</td>
+    <td width="4%" align="center">2</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">2</td>
+    <td width="5%" align="center">8½</td>
+    <td width="4%" align="center">7½</td>
+    <td width="5%" align="center">1.50</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">19</td>
+    <td width="6%" align="right">40</td>
+    <td width="29%">Zhou Kyle</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">46</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">4</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">12</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">38</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">1</td>
+    <td width="4%" align="center">2</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">2</td>
+    <td width="5%" align="center">8½</td>
+    <td width="4%" align="center">7</td>
+    <td width="5%" align="center">1.50</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">20</td>
+    <td width="6%" align="right">51</td>
+    <td width="29%">Bai Wang</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">47</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">16</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">36</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">1</td>
+    <td width="4%" align="center">2</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">2</td>
+    <td width="5%" align="center">7½</td>
+    <td width="4%" align="center">7</td>
+    <td width="5%" align="center">1.00</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">21</td>
+    <td width="6%" align="right">53</td>
+    <td width="29%">Clementi Carter</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">53</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">42</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">1</td>
+    <td width="4%" align="center">2</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">2</td>
+    <td width="5%" align="center">7½</td>
+    <td width="4%" align="center">6½</td>
+    <td width="5%" align="center">1.00</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">22</td>
+    <td width="6%" align="right">52</td>
+    <td width="29%">Nikul Siddharth</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">31</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">54</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">30</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">1</td>
+    <td width="4%" align="center">2</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">2</td>
+    <td width="5%" align="center">7</td>
+    <td width="4%" align="center">6</td>
+    <td width="5%" align="center">1.00</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">&nbsp;</td>
+    <td width="6%" align="right">59</td>
+    <td width="29%">Andrew Lumley</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">48</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">32</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">1</td>
+    <td width="4%" align="center">2</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">2</td>
+    <td width="5%" align="center">7</td>
+    <td width="4%" align="center">6</td>
+    <td width="5%" align="center">1.00</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">24</td>
+    <td width="6%" align="right">37</td>
+    <td width="29%">Yang Kevin</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">15</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">51</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">28</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">½</td>
+    <td width="3%" align="center">25</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">½</td>
+    <td width="4%" align="center">2</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">1</td>
+    <td width="5%" align="center">6½</td>
+    <td width="4%" align="center">6</td>
+    <td width="5%" align="center">1.75</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">25</td>
+    <td width="6%" align="right">19</td>
+    <td width="29%">Liu Shuangquan</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">42</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">½</td>
+    <td width="3%" align="center">10</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">44</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">24</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">½</td>
+    <td width="4%" align="center">2</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">1</td>
+    <td width="5%" align="center">6½</td>
+    <td width="4%" align="center">5½</td>
+    <td width="5%" align="center">2.00</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">26</td>
+    <td width="6%" align="right">36</td>
+    <td width="29%">Xue Andi</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">13</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">½</td>
+    <td width="3%" align="center">42</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">6</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">18</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">0</td>
+    <td width="4%" align="center">1½</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">1</td>
+    <td width="5%" align="center">9½</td>
+    <td width="4%" align="center">8½</td>
+    <td width="5%" align="center">2.25</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">27</td>
+    <td width="6%" align="right">47</td>
+    <td width="29%">Sathiyaraj Ritvik Gautham</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">65</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">8</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">29</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">½</td>
+    <td width="4%" align="center">1½</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">1</td>
+    <td width="5%" align="center">9</td>
+    <td width="4%" align="center">7½</td>
+    <td width="5%" align="center">0.75</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">28</td>
+    <td width="6%" align="right">13</td>
+    <td width="29%">Isaac Reategui-Madley</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">9</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">59</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">24</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">½</td>
+    <td width="3%" align="center">11</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">0</td>
+    <td width="4%" align="center">1½</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">1</td>
+    <td width="5%" align="center">8½</td>
+    <td width="4%" align="center">7½</td>
+    <td width="5%" align="center">1.00</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">29</td>
+    <td width="6%" align="right">62</td>
+    <td width="29%">Wang Benjamin</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">43</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">27</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">½</td>
+    <td width="4%" align="center">1½</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">1</td>
+    <td width="5%" align="center">7½</td>
+    <td width="4%" align="center">6½</td>
+    <td width="5%" align="center">1.75</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">30</td>
+    <td width="6%" align="right">11</td>
+    <td width="29%">Ha Lucas</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">6</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">67</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">9</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">22</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">0</td>
+    <td width="4%" align="center">1</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">1</td>
+    <td width="5%" align="center">10</td>
+    <td width="4%" align="center">8½</td>
+    <td width="5%" align="center">0.00</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">31</td>
+    <td width="6%" align="right">42</td>
+    <td width="29%">Guenther Schepp</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">22</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">15</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="4%" align="center">1</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">1</td>
+    <td width="5%" align="center">9½</td>
+    <td width="4%" align="center">7½</td>
+    <td width="5%" align="center">2.00</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">32</td>
+    <td width="6%" align="right">45</td>
+    <td width="29%">Rudra Harvansh</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">38</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">14</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">23</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">0</td>
+    <td width="4%" align="center">1</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">1</td>
+    <td width="5%" align="center">9</td>
+    <td width="4%" align="center">7½</td>
+    <td width="5%" align="center">1.00</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">33</td>
+    <td width="6%" align="right">30</td>
+    <td width="29%">Taylor Michael</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">62</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="4%" align="center">1</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">1</td>
+    <td width="5%" align="center">9</td>
+    <td width="4%" align="center">7½</td>
+    <td width="5%" align="center">0.00</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">34</td>
+    <td width="6%" align="right">44</td>
+    <td width="29%">Przybylski Denis</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">43</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">17</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="4%" align="center">1</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">1</td>
+    <td width="5%" align="center">8</td>
+    <td width="4%" align="center">7</td>
+    <td width="5%" align="center">1.00</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">35</td>
+    <td width="6%" align="right">56</td>
+    <td width="29%">Chunchu Ashwin</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">49</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="4%" align="center">1</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">1</td>
+    <td width="5%" align="center">7½</td>
+    <td width="4%" align="center">7</td>
+    <td width="5%" align="center">0.00</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">&nbsp;</td>
+    <td width="6%" align="right">58</td>
+    <td width="29%">Arthur Ji</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">49</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">20</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">0</td>
+    <td width="4%" align="center">1</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">1</td>
+    <td width="5%" align="center">7½</td>
+    <td width="4%" align="center">7</td>
+    <td width="5%" align="center">0.00</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">37</td>
+    <td width="6%" align="right">60</td>
+    <td width="29%">Nimer Michael</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">59</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="4%" align="center">1</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">1</td>
+    <td width="5%" align="center">7½</td>
+    <td width="4%" align="center">6½</td>
+    <td width="5%" align="center">0.00</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">38</td>
+    <td width="6%" align="right">55</td>
+    <td width="29%">Alchouli Ryan</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">32</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">66</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">1</td>
+    <td width="3%" align="center">19</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">0</td>
+    <td width="4%" align="center">1</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">1</td>
+    <td width="5%" align="center">7½</td>
+    <td width="4%" align="center">6</td>
+    <td width="5%" align="center">0.00</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">39</td>
+    <td width="6%" align="right">7</td>
+    <td width="29%">Eswaran Prathyuksh</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">4</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">49</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">1</td>
+    <td width="4%" align="center">1</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">1</td>
+    <td width="5%" align="center">7</td>
+    <td width="4%" align="center">6½</td>
+    <td width="5%" align="center">0.00</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">40</td>
+    <td width="6%" align="right">65</td>
+    <td width="29%">Erlich Noah</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">51</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">1</td>
+    <td width="4%" align="center">1</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">1</td>
+    <td width="5%" align="center">6½</td>
+    <td width="4%" align="center">6</td>
+    <td width="5%" align="center">0.00</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">&nbsp;</td>
+    <td width="6%" align="right">67</td>
+    <td width="29%">Rahman Safaa</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">47</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">1</td>
+    <td width="4%" align="center">1</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">1</td>
+    <td width="5%" align="center">6½</td>
+    <td width="4%" align="center">6</td>
+    <td width="5%" align="center">0.00</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">42</td>
+    <td width="6%" align="right">39</td>
+    <td width="29%">Zhou Jayden</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">25</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">½</td>
+    <td width="3%" align="center">26</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">46</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">½</td>
+    <td width="3%" align="center">21</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">0</td>
+    <td width="4%" align="center">1</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">8</td>
+    <td width="4%" align="center">6½</td>
+    <td width="5%" align="center">1.25</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">43</td>
+    <td width="6%" align="right">54</td>
+    <td width="29%">Alchouli Wisam</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">34</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">29</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">1</td>
+    <td width="4%" align="center">1</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">7</td>
+    <td width="4%" align="center">7</td>
+    <td width="5%" align="center">2.00</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">44</td>
+    <td width="6%" align="right">24</td>
+    <td width="29%">Reategui-Madley Samuel</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">5</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">25</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">45</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">½</td>
+    <td width="4%" align="center">½</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">9</td>
+    <td width="4%" align="center">7</td>
+    <td width="5%" align="center">0.25</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">45</td>
+    <td width="6%" align="right">66</td>
+    <td width="29%">Mummery Audrey</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">44</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">½</td>
+    <td width="4%" align="center">½</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">7</td>
+    <td width="4%" align="center">6</td>
+    <td width="5%" align="center">0.25</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">46</td>
+    <td width="6%" align="right">20</td>
+    <td width="29%">Lui Benjamin</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">19</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">42</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">½</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="4%" align="center">½</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">6½</td>
+    <td width="4%" align="center">5½</td>
+    <td width="5%" align="center">0.50</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">47</td>
+    <td width="6%" align="right">26</td>
+    <td width="29%">Sarangan Sharan Surya</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">3</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">20</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">41</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">0</td>
+    <td width="4%" align="center">0</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">10</td>
+    <td width="4%" align="center">8½</td>
+    <td width="5%" align="center">0.00</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">48</td>
+    <td width="6%" align="right">49</td>
+    <td width="29%">Mathur Apramey</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">12</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">23</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="4%" align="center">0</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">9</td>
+    <td width="4%" align="center">8</td>
+    <td width="5%" align="center">0.00</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">49</td>
+    <td width="6%" align="right">46</td>
+    <td width="29%">Maftins Arya</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">35</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">36</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">39</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">0</td>
+    <td width="4%" align="center">0</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">9</td>
+    <td width="4%" align="center">7</td>
+    <td width="5%" align="center">0.00</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">50</td>
+    <td width="6%" align="right">8</td>
+    <td width="29%">Evangelista Juan Cebastian</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">1</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="4%" align="center">0</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">8½</td>
+    <td width="4%" align="center">7½</td>
+    <td width="5%" align="center">0.00</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">51</td>
+    <td width="6%" align="right">15</td>
+    <td width="29%">Khan Ayaan</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">8</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">24</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">40</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">0</td>
+    <td width="4%" align="center">0</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">8½</td>
+    <td width="4%" align="center">7</td>
+    <td width="5%" align="center">0.00</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">52</td>
+    <td width="6%" align="right">18</td>
+    <td width="29%">Liu Aaron</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">2</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="4%" align="center">0</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">8</td>
+    <td width="4%" align="center">7</td>
+    <td width="5%" align="center">0.00</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">&nbsp;</td>
+    <td width="6%" align="right">43</td>
+    <td width="29%">Masur Kishore</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">21</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="4%" align="center">0</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">8</td>
+    <td width="4%" align="center">7</td>
+    <td width="5%" align="center">0.00</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">&nbsp;</td>
+    <td width="6%" align="right">61</td>
+    <td width="29%">Nimer Christina</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">22</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="4%" align="center">0</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">8</td>
+    <td width="4%" align="center">7</td>
+    <td width="5%" align="center">0.00</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">&nbsp;</td>
+    <td width="6%" align="right">64</td>
+    <td width="29%">Shamsi Azlan</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">13</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="4%" align="center">0</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">8</td>
+    <td width="4%" align="center">7</td>
+    <td width="5%" align="center">0.00</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">56</td>
+    <td width="6%" align="right">1</td>
+    <td width="29%">Aini Elyas</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">7</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="4%" align="center">0</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">7½</td>
+    <td width="4%" align="center">6½</td>
+    <td width="5%" align="center">0.00</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">&nbsp;</td>
+    <td width="6%" align="right">2</td>
+    <td width="29%">Aini Mohanmmad</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">11</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="4%" align="center">0</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">7½</td>
+    <td width="4%" align="center">6½</td>
+    <td width="5%" align="center">0.00</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">&nbsp;</td>
+    <td width="6%" align="right">5</td>
+    <td width="29%">Bhosale Rudra</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">18</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">13</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="4%" align="center">0</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">7½</td>
+    <td width="4%" align="center">6½</td>
+    <td width="5%" align="center">0.00</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">&nbsp;</td>
+    <td width="6%" align="right">50</td>
+    <td width="29%">Ghorai Toshani</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">28</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">37</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="4%" align="center">0</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">7½</td>
+    <td width="4%" align="center">6½</td>
+    <td width="5%" align="center">0.00</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">60</td>
+    <td width="6%" align="right">3</td>
+    <td width="29%">Aini Sarah</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">10</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="4%" align="center">0</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">7</td>
+    <td width="4%" align="center">6</td>
+    <td width="5%" align="center">0.00</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">&nbsp;</td>
+    <td width="6%" align="right">9</td>
+    <td width="29%">Gundlapalli Manoj</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">17</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="4%" align="center">0</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">7</td>
+    <td width="4%" align="center">6</td>
+    <td width="5%" align="center">0.00</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">&nbsp;</td>
+    <td width="6%" align="right">10</td>
+    <td width="29%">Gundlapalli Sindhur</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">33</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="4%" align="center">0</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">7</td>
+    <td width="4%" align="center">6</td>
+    <td width="5%" align="center">0.00</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">&nbsp;</td>
+    <td width="6%" align="right">14</td>
+    <td width="29%">Jia Daniel</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">16</td>
+    <td width="2%" align="center">w</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="4%" align="center">0</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">7</td>
+    <td width="4%" align="center">6</td>
+    <td width="5%" align="center">0.00</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">&nbsp;</td>
+    <td width="6%" align="right">23</td>
+    <td width="29%">Rashid Zain</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="4%" align="center">0</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">7</td>
+    <td width="4%" align="center">6</td>
+    <td width="5%" align="center">0.00</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">&nbsp;</td>
+    <td width="6%" align="right">57</td>
+    <td width="29%">Dasgupta Kanishk</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">27</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="4%" align="center">0</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">7</td>
+    <td width="4%" align="center">6</td>
+    <td width="5%" align="center">0.00</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">&nbsp;</td>
+    <td width="6%" align="right">63</td>
+    <td width="29%">Zupancic Victor</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">38</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="4%" align="center">0</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">7</td>
+    <td width="4%" align="center">6</td>
+    <td width="5%" align="center">0.00</td>
+    </tr>
+    <tr>
+    <td width="6%" align="right">67</td>
+    <td width="6%" align="right">48</td>
+    <td width="29%">Srivastava Atharv</td>
+    <td width="5%" align="center">CAN</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">30</td>
+    <td width="2%" align="center">b</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="3%" align="center">-</td>
+    <td width="2%" align="center">-</td>
+    <td width="2%" align="center">0</td>
+    <td width="4%" align="center">0</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">0</td>
+    <td width="5%" align="center">6</td>
+    <td width="4%" align="center">5</td>
+    <td width="5%" align="center">0.00</td>
+    </tr>
+    </tbody></table>
+<script >
+  function myFunction() {
+    var input, filter, table, tr, tdArray, txtValueArray;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable");
+    tr = table.getElementsByTagName("tr");
+    for (var i = 0; i < tr.length; i++) {
+      tdArray = tr[i].getElementsByTagName("td");
+      txtValueArray = [];
+      for (var j = 0; j < tdArray.length; j++) {
+        txtValueArray[j] = tdArray[j].textContent || tdArray[j].innerText;
+      }
+      if (txtValueArray.join(' ').toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+        for (var k = 0; k < tdArray.length; k++) {
+          var regex = new RegExp(filter, "gi");
+          tdArray[k].innerHTML = txtValueArray[k].replace(regex, '<span class="highlight">$&</span>');
+        }
+      } else {
+        tr[i].style.display = "none";
+        for (var k = 0; k < tdArray.length; k++) {
+          tdArray[k].innerHTML = txtValueArray[k];
+        }
+      }
+    }
+  }
+  const searchContainer = document.querySelector('.search-container');
+const clearBtn = document.querySelector('.clear-btn');
+const input = document.querySelector('input');
+
+searchContainer.addEventListener('click', function() {
+  searchContainer.classList.toggle('activesearch');
+  input.value = "";
+});
+
+input.addEventListener('click', function(e) {
+  e.stopPropagation();
+});
+
+  </script>
+  
+
+      
+</body>
+</html>

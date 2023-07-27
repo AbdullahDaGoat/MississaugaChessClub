@@ -150,3 +150,41 @@ input:checked + li > label { display: block; }
         transform: rotate(45deg) translate(20px, 20px);
     }
 }
+
+
+@media only screen and (max-width: 768px) {
+
+    /* Adjust the layout for smaller screens */
+    
+    #body {
+    width: 100vw;
+    }
+    
+    .img-inner {
+    width: 80%;
+    }
+    
+    label.sb-bignav {
+    font-size: 10vw;
+    line-height: 20vw;
+    }
+    
+    
+    }
+    
+    @media only screen and (max-width: 480px) {
+    
+    /* Adjust the layout for even smaller screens */
+    
+    .img-inner {
+    width: 100vw;
+    margin-left: 3rem;
+    }
+    
+    label.sb-bignav {
+    font-size: 15vw;
+    line-height: 30vw;
+    }
+    
+    }
+    

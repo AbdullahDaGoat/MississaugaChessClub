@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://kit.fontawesome.com/79f50f4d96.js" crossorigin="anonymous" defer></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css" /><link href="https://fonts.googleapis.com/css?family=Montserrat:500,700,900|Work+Sans:300" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">   
+<meta name="google-site-verification" content="XvbKOScr7pen_v1iqTNPQKmCgooVYp-1hZrBuiuv7J8" />
+<style>
+*, html{
+  box-sizing: border-box;
+  scroll-behavior: auto !important;
+}
+
+.search-container {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  border-radius: 60px;
+  transition: width 0.2s ease-in-out;
+}
+
+h2{
+  text-align: center;
+}
+
+
+
+.search-container.activesearch {
+  width: 98%;
+  box-shadow: 0 0 8px red;
+}
+
+.search-container input {
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  transform: translateY(-50%);
+  width: 80%;
+  height: 35px;
+  padding: 0 20px;
+  border: none;
+  border-radius: 2px;
+  background: none;
+  font-size: 14px;
+  visibility: hidden;
+  opacity: 0;
+  outline: none;
+  transition: visibility 0s, opacity 0.5s ease-in-out;
+}
+
+.search-container.activesearch input {
+  visibility: visible;
+  opacity: 1;
+}
+.search-container i.fa-search {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  font-size: 25px;
+  cursor: pointer;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+.highlight {
+  background-color: yellow;
+}
+
+.fixed{
+    font-family: Arial;
+    color: #000000;
+    background-color: #E8E8E8;
+    font-weight: bold;
+}
+
+td, tr{
+    padding: 3px;
+    border: 1px solid black;
+}
+
+td{
+        display: table-cell;
+        vertical-align: inherit;
+    
+}
+
+table{
+    border-collapse: collapse;
+    border: 1px solid black;
+    text-indent: initial;
+    border-spacing: 2px
+}
+</style>
+</head>
+<body>
+
+<h2>SwissSys Standings. MCC Junior Tournament #9: Blue Section</h2>
+
+<div class="searchbar-body">
+  <div class="search-container">
+    <i class="fa fa-search"></i>
+    <input type="text" placeholder="Search Your Name, or Rating " id="myInput" onkeyup="myFunction()">
+  </div>
+<table id="myTable">
+  <tr class="header">
+    <thead>
+        <td class="fixed">#</td>
+        <td class="fixed">Place</td>
+        <td class="fixed">Name</td>
+        <td class="fixed">ID</td>
+        <td class="fixed">Rating</td>
+        <td class="fixed">Rd 1</td>
+        <td class="fixed">Rd 2</td>
+        <td class="fixed">Rd 3 </td>
+        <td class="fixed">Total</td>
+        <td class="fixed">T-1-on-1</td>
+        <td class="fixed">T-Avg-Op</td>
+    </thead>
+    <tbody><tr><td class="fixed">1</td><td class="">1</td><td class="name">Noureddin Mohamed</td><td class="idnum">176495</td><td class="rating">1006</td><td class="result">W8</td><td class="result">W10</td><td class="result">W3</td><td class="total"> 3.0</td>
+        <td class="ties">0</td><td class="ties">770</td></tr>
+        <tr><td class="fixed">2</td><td class="">2-5</td><td class="name">Catherine Alvina Anto</td><td class="idnum">182194</td><td class="rating"> 658</td><td class="result">B---</td><td class="result">L3</td><td class="result">W14</td>
+        <td class="total"> 2.0</td><td class="ties">0</td><td class="ties">852.5</td></tr>
+        <tr><td class="fixed">3</td><td class="">&nbsp;</td><td class="name">Visvareth Vashatkar B. Athreya</td><td class="idnum">175907</td><td class="rating"> 950</td><td class="result">W18</td><td class="result">W2</td><td class="result">L1</td>
+        <td class="total"> 2.0</td><td class="ties">0</td><td class="ties">826.5</td></tr>
+        <tr><td class="fixed">4</td><td class="">&nbsp;</td><td class="name">Bhargav Natarajan</td><td class="idnum">175694</td><td class="rating"> 869</td><td class="result">L9</td><td class="result">W11</td><td class="result">W6</td>
+        <td class="total"> 2.0</td><td class="ties">0</td><td class="ties">673</td></tr>
+        <tr><td class="fixed">5</td><td class="">&nbsp;</td><td class="name">Advik Singh</td><td class="idnum">176521</td><td class="rating"> 633</td><td class="result">W15</td><td class="result"> ---</td><td class="result">W10</td>
+        <td class="total"> 2.0</td><td class="ties">0</td><td class="ties">446.5</td></tr>
+        <tr><td class="fixed">6</td><td class="">6</td><td class="name">Kiarash Mansouri</td><td class="idnum">179156</td><td class="rating"> 647</td><td class="result">W11</td><td class="result">D12</td><td class="result">L4</td><td class="total"> 1.5</td>
+        <td class="ties">0</td><td class="ties">797</td></tr>
+        <tr><td class="fixed">7</td><td class="">7-16</td><td class="name">Akshat Shukla</td><td class="idnum">181704</td><td class="rating"> 626</td><td class="result">L16</td><td class="result"> ---</td><td class="result">B---</td>
+        <td class="total"> 1.0</td><td class="ties">0</td><td class="ties">1026</td></tr>
+        <tr><td class="fixed">8</td><td class="">&nbsp;</td><td class="name">Virinchi Reddy Pappula</td><td class="idnum">176226</td><td class="rating"> 700</td><td class="result">L1</td><td class="result"> ---</td><td class="result">W22</td>
+        <td class="total"> 1.0</td><td class="ties">0</td><td class="ties">877</td></tr>
+        <tr><td class="fixed">9</td><td class="">&nbsp;</td><td class="name">Vikrant Mehra</td><td class="idnum">176319</td><td class="rating"> 642</td><td class="result">W4</td><td class="result"> ---</td><td class="result"> ---</td>
+        <td class="total"> 1.0</td><td class="ties">0</td><td class="ties">869</td></tr>
+        <tr><td class="fixed">10</td><td class="">&nbsp;</td><td class="name">Zachary Suschenko</td><td class="idnum">180219</td><td class="rating"> 660</td><td class="result">W23</td><td class="result">L1</td><td class="result">L5</td>
+        <td class="total"> 1.0</td><td class="ties">0</td><td class="ties">767</td></tr>
+        <tr><td class="fixed">11</td><td class="">&nbsp;</td><td class="name">Vera Sydorenko</td><td class="idnum">176627</td><td class="rating"> 730</td><td class="result">L6</td><td class="result">L4</td><td class="result">W21</td>
+        <td class="total"> 1.0</td><td class="ties">0</td><td class="ties">743</td></tr>
+        <tr><td class="fixed">12</td><td class="">&nbsp;</td><td class="name">Jingchen Wu</td><td class="idnum">175342</td><td class="rating"> 793</td><td class="result">U---</td><td class="result">D6</td><td class="result">D17</td>
+        <td class="total"> 1.0</td><td class="ties">0</td><td class="ties">723</td></tr>
+        <tr><td class="fixed">13</td><td class="">&nbsp;</td><td class="name">Antarip Das</td><td class="idnum">181174</td><td class="rating"> 767</td><td class="result">U---</td><td class="result">W19</td><td class="result"> ---</td>
+        <td class="total"> 1.0</td><td class="ties">0</td><td class="ties">664</td></tr>
+        <tr><td class="fixed">14</td><td class="">&nbsp;</td><td class="name">Aarnav Shah</td><td class="idnum">167836</td><td class="rating"> 755</td><td class="result">W20</td><td class="result"> ---</td><td class="result">L2</td>
+        <td class="total"> 1.0</td><td class="ties">0</td><td class="ties">652.5</td></tr>
+        <tr><td class="fixed">15</td><td class="">&nbsp;</td><td class="name">Raghav Tulsian</td><td class="idnum">181995</td><td class="rating">unr.</td><td class="result">L5</td><td class="result">B---</td><td class="result"> ---</td>
+        <td class="total"> 1.0</td><td class="ties">0</td><td class="ties">633</td></tr>
+        <tr><td class="fixed">16</td><td class="">&nbsp;</td><td class="name">Ryan Wong</td><td class="idnum">181795</td><td class="rating">unr.</td><td class="result">W7</td><td class="result"> ---</td><td class="result"> ---</td>
+        <td class="total"> 1.0</td><td class="ties">0</td><td class="ties">626</td></tr>
+        <tr><td class="fixed">17</td><td class="">17</td><td class="name">Abdullah Khan</td><td class="idnum">160674</td><td class="rating"> 799</td><td class="result">U---</td><td class="result">U---</td><td class="result">D12</td>
+        <td class="total"> 0.5</td><td class="ties">0</td><td class="ties">793</td></tr>
+        <tr><td class="fixed">18</td><td class="">18-23</td><td class="name">Daniel Martin</td><td class="idnum">177952</td><td class="rating"> 816</td><td class="result">L3</td><td class="result"> ---</td><td class="result"> ---</td>
+        <td class="total"> 0.0</td><td class="ties">0</td><td class="ties">950</td></tr>
+        <tr><td class="fixed">19</td><td class="">&nbsp;</td><td class="name">Liheng Luo</td><td class="idnum">175947</td><td class="rating"> 664</td><td class="result">U---</td><td class="result">L13</td><td class="result"> ---</td>
+        <td class="total"> 0.0</td><td class="ties">0</td><td class="ties">767</td></tr>
+        <tr><td class="fixed">20</td><td class="">&nbsp;</td><td class="name">Sarwesh Alagappan</td><td class="idnum">177452</td><td class="rating"> 647</td><td class="result">L14</td><td class="result"> ---</td><td class="result"> ---</td>
+        <td class="total"> 0.0</td><td class="ties">0</td><td class="ties">755</td></tr>
+        <tr><td class="fixed">21</td><td class="">&nbsp;</td><td class="name">Owen Gregersen</td><td class="idnum">177824</td><td class="rating"> 714</td><td class="result">U---</td><td class="result">U---</td><td class="result">L11</td>
+        <td class="total"> 0.0</td><td class="ties">0</td><td class="ties">730</td></tr>
+        <tr><td class="fixed">22</td><td class="">&nbsp;</td><td class="name">Mulin Chen</td><td class="idnum">179290</td><td class="rating"> 748</td><td class="result">U---</td><td class="result">U---</td><td class="result">L8</td>
+        <td class="total"> 0.0</td><td class="ties">0</td><td class="ties">700</td></tr>
+        <tr><td class="fixed">23</td><td class="">&nbsp;</td><td class="name">Nicholas Nguyen</td><td class="idnum">180994</td><td class="rating"> 663</td><td class="result">L10</td><td class="result"> ---</td><td class="result"> ---</td>
+        <td class="total"> 0.0</td><td class="ties">0</td><td class="ties">660</td></tr>
+        </tbody>
+    </table>
+<script >
+  function myFunction() {
+    var input, filter, table, tr, tdArray, txtValueArray;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable");
+    tr = table.getElementsByTagName("tr");
+    for (var i = 0; i < tr.length; i++) {
+      tdArray = tr[i].getElementsByTagName("td");
+      txtValueArray = [];
+      for (var j = 0; j < tdArray.length; j++) {
+        txtValueArray[j] = tdArray[j].textContent || tdArray[j].innerText;
+      }
+      if (txtValueArray.join(' ').toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+        for (var k = 0; k < tdArray.length; k++) {
+          var regex = new RegExp(filter, "gi");
+          tdArray[k].innerHTML = txtValueArray[k].replace(regex, '<span class="highlight">$&</span>');
+        }
+      } else {
+        tr[i].style.display = "none";
+        for (var k = 0; k < tdArray.length; k++) {
+          tdArray[k].innerHTML = txtValueArray[k];
+        }
+      }
+    }
+  }
+  const searchContainer = document.querySelector('.search-container');
+const clearBtn = document.querySelector('.clear-btn');
+const input = document.querySelector('input');
+
+searchContainer.addEventListener('click', function() {
+  searchContainer.classList.toggle('activesearch');
+  input.value = "";
+});
+
+input.addEventListener('click', function(e) {
+  e.stopPropagation();
+});
+
+  </script>
+  
+
+      
+</body>
+</html>

@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="./stylesheets/user/whoweare.css"/>
     <link rel="stylesheet" type="text/css" href="./stylesheets/user/nav.css"/>
     <link rel="stylesheet" type="text/css" href="./stylesheets/user/footer.css"/>
-
+    <meta name="google-site-verification" content="XvbKOScr7pen_v1iqTNPQKmCgooVYp-1hZrBuiuv7J8" />
     <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript"></script>
@@ -90,7 +90,7 @@
                 </ul>
               </li>
                 <li style="margin-left: -2rem;">
-                    <a href="#"  class="links">Other
+                    <a href="#"  class="links links-other">Other
                       <i class="icon ion-md-arrow-dropdown"></i>
                       <ul class="sub-menu">
                         <li class="has-sub-menu">
@@ -135,6 +135,7 @@
             <h3>Meet our Team and Volunteers</h3>
         </div>
         <div class="swiper mySwiper">
+    
             <div class="swiper-wrapper">
                 
                 <div class="swiper-slide">
@@ -228,23 +229,76 @@
                 </div>
               
             </div>
-            
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>   
     </section>
 
-    <section class="newsletter-wrapper">
+    <!-- <section class="newsletter-wrapper">
         <div class="content-newsletter">
             <div class="newsletter-header">
-                <h1>Sign up to our Newsletter below</h1>
+                <h1>Register Yourself to the Club Below</h1>
             </div>
             <div class="footer-newsletter">
                 <form id="submit-to-google-sheet">
-                    <input type="email" name="email" value="name@email.com" placeholder="Enter Email Here" required />
+                    <input type="email" name="Email" value="name@email.com" placeholder="Enter Email Here" required />
                     <button class="newsletter-button" role="button">Subscribe <i class="fa-solid fa-paper-plane"></i> </button>
                 </form>
                 <span id="msg"></span>
             </div>
         </div>
+    </section> -->
+    <section class="newsletter-wrapper" id="newsletter">
+      <div class="content-newsletter">
+        <div class="newsletter-header">
+          <h1>Register Yourself to the Club Below</h1>
+        </div>
+        <div class="footer-newsletter">
+          <form id="submit-to-google-sheet">
+            <div id="step1">
+              <input type="email" name="Email" placeholder="Enter Email Here" required />
+              <button class="newsletter-button next-button" role="button">Next</button>
+            </div>
+            <div id="step2" style="display:none;">
+              <input type="text" name="First_Name" placeholder="Enter First Name" required />
+              <button class="newsletter-button next-button" role="button">Next</button>
+            </div>
+            <div id="step3" style="display:none;">
+              <input type="text" name="Last_Name" placeholder="Enter Last Name" required  />
+              <button class="newsletter-button next-button" role="button">Next</button>
+            </div>
+            <div id="step4" style="display:none;">
+              <input type="text" name="Interested_Day_Of_Registration" placeholder="Enter interested day to signup" required/>
+              <button class="newsletter-button next-button" role="button">Next</button>
+            </div>
+            <div id="step5" style="display:none;">
+              <input type="text" name="Year_Of_Birth" placeholder="Enter Date of Birth" required  />
+              <button class="newsletter-button next-button" role="button">Next</button>
+            </div>
+            <div id="step6" style="display:none;">
+              <input type="text" name="Parents_Name" placeholder="Enter Parent's Name"  />
+              <button class="newsletter-button next-button" role="button">Next</button>
+            </div>
+            <div id="step7" style="display:none;">
+              <input type="tel" name="Phone_NO." placeholder="Enter Phone Number" required  />
+              <button class="newsletter-button next-button" role="button">Next</button>
+            </div>
+            <div id="step8" style="display:none;">
+              <input type="text" name="CFC_ID" placeholder="Enter CFC ID" />
+              <button class="newsletter-button next-button" role="button">Next</button>
+            </div>
+            <div id="step9" style="display:none;">
+              <input type="text" name="Existing_Other_Family_Member"placeholder="Enter exsisting Siblings (optional)"/>
+              <button class="newsletter-button next-button" role="button">Next</button>
+            </div>
+            <div id="step10" style="display:none;">
+              <textarea type="text" name="Comments" placeholder="Comments? Concerns" ></textarea>
+              <button class="newsletter-button" role="button">Subscribe <i class="fa-solid fa-paper-plane"></i> </button>
+            </div>
+          </form>
+          <span id="msg"></span>
+        </div>
+      </div>
     </section>
     <!-- Footer-->
     <footer class="footer">
@@ -305,51 +359,28 @@
 
 
       <script async>
-const scriptURL = 'https://script.google.com/macros/s/AKfycbx-qwpPL2qhp41pq86nVD2vy_O_qJHoB4f9MznHftETckvv7eU30ZsnfmF3EN4OwNEv0Q/exec'
-const form = document.forms['submit-to-google-sheet']
-const msg = document.getElementById('msg')
-const submissionDate = localStorage.getItem('submissionDate')
-if (submissionDate) {
-    const oneWeek = 24 * 60 * 60 * 1000 //Cant submit unless one day passed 
-  const timeSinceSubmission = Date.now() - submissionDate
-  if (timeSinceSubmission < oneWeek) {
-    form.querySelector('input[name="email"]').style.display = 'none'
-    const button = document.querySelector('.newsletter-button')
-    button.textContent = 'You have subscribed'
-  }
-}
-
-form.addEventListener('submit', e => {
-  e.preventDefault()
-
-  const submissionDate = localStorage.getItem('submissionDate')
-  if (submissionDate) {
-   const oneWeek = 24 * 60 * 60 * 1000  //Cant submit unless one day passed 
-    const timeSinceSubmission = Date.now() - submissionDate
-    if (timeSinceSubmission < oneWeek) {
-      alert('To prevent spam, we limit one submission per day.')
-      return
-    }
-  }
-
-  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-    .then(response => {
-      msg.textContent = 'Thank you for subscribing!'
-      setTimeout(function() {
-        msg.textContent = ''
-      }, 10000);
-      console.log('Message Sent Successfully')
-      form.querySelector('input[name="email"]').style.display = 'none'
-      const button = document.querySelector('.newsletter-button')
-      button.textContent = 'You have subscribed'
-      localStorage.setItem('submissionDate', Date.now())
-    })
-    .catch(error => {
-      alert('Message Failed to Sent Please Reach out to Us')
-      alert('Please press Ctrl + I, and go to console and give us the error message recieved in the form')
-      console.error('Error!', error.message)
-    })
-})
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbx-qwpPL2qhp41pq86nVD2vy_O_qJHoB4f9MznHftETckvv7eU30ZsnfmF3EN4OwNEv0Q/exec';
+        const form = document.forms['submit-to-google-sheet'];
+        const msg = document.getElementById('msg');
+        const newsletter = document.getElementById('newsletter');
+        const submissionDate = localStorage.getItem('submissionDate');
+        
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+        
+            fetch(scriptURL, { method: 'POST', body: new FormData(e.target)})
+              .then(response => {
+                form.reset();
+                msg.textContent = "You have signed up. Thank you! Please do not resubmit unless you made an error";
+                console.log('Message Sent Successfully');
+                localStorage.setItem('submissionDate', currentDate);
+              })
+              .catch(error => {
+                console.error('Error!', error.message);
+                alert("An Error occurred, please contact support with the following error: ", error, error.message);
+              });
+          })
+          
       </script>
 </body>
 </html>
