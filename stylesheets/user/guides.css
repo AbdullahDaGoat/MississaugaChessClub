@@ -145,6 +145,11 @@ p{
   word-break: break-all;
 }
 
+p li{
+  font-size: 18px;
+
+}
+
 @keyframes slide-in {
   0% {
     transform: translateY(-100%);
