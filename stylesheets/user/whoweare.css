@@ -230,10 +230,8 @@ a{
     bottom: 0px;
     width: 100%;
     height: 150px;
-    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgb(0, 0, 0) 100%);
 }
 .t-s-img img{
-    filter: grayscale(1);
     width: 100%;
     height: 100%;
     object-fit: contain;

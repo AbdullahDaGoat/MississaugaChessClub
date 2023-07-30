@@ -9,7 +9,6 @@
 body {
   background: #dcc3a6;
   scroll-behavior: smooth;
-  overflow-y: hidden;
 }
 
 button{
@@ -60,6 +59,34 @@ button{
 }
 .nav.open .sidebar {
   left: 0;
+}
+
+h2{
+  font-size: 18px;
+}
+.text p, ul, ol{
+  font-size: 14px;
+  width: 100%;
+}
+
+.container-NC {
+  display: grid;
+  grid-template-columns: 600px auto; /* set the width of the left column */
+  grid-gap: 20px; /* add some spacing between the columns */
+}
+
+.image img {
+  max-width: 100%;
+  /* set the maximum width of the image */
+
+}
+
+
+
+@media (max-width: 768px) { /* adjust the layout for smaller screens */
+  .container {
+    grid-template-columns: 1fr; /* change to a single column layout */
+  }
 }
 
 
@@ -125,7 +152,6 @@ article{
   margin-top: 10rem;
   margin-left: 28rem;
   width: 72vw;
-  height: 50rem;
 }
 
 /* Add this to your CSS */
