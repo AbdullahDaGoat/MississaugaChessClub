@@ -670,6 +670,7 @@ transform: translate(-50%, -50%) translateX(50px);
 }
 .sec1 .parent-tab label,
 .sec1 .child-tab label{
+  width: 95%;
   background: #007bff;
   padding: 10px 20px;
   display: flex;
