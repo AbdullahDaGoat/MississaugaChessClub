@@ -26,14 +26,17 @@ submit.addEventListener("submit", (e) => {
     ${phone.value} 
     <br> Message:  
     ${message.value}
+    <br> 
+    <br> 
+    <br> 
+    <i>Please note, <b>faheemk.dev@gmail.com</b> is not the sender of this email. That is the email address of the Developer that setup the contact form email on the website.</i>
     `;
 
     //sends email:
     Email.send({
-        // SecureToken: "3a9c6519-6fbc-46bd-919e-7e0ad0bbe1ed", --> Real (no work)
-        // SecureToken: "8e7212e0-fd27-4e45-b9de-c2d05cdc9f22 ", --> dev (didnt work)
-        To: "abdullahaviator13@gmail.com",
-        From: email.value,
+        SecureToken: "d6c6f7ba-0ce3-4994-89be-dc343148a62e",
+        To: "mississaugachessclub@gmail.com",
+        From: "faheemk.dev@gmail.com",
         Subject: " A Client from the Mississauga Chess Club Website is trying to Reach Us!",
         Body: emailBody,
     })
