@@ -11,3 +11,7 @@ const config = {
 
   // D3252AB9D9CA5DC868512E3D18B8B989162C --> secure test server for abdullah
   // cfbd09c8-b805-461f-9dea-e8f8270b1088 --> secure test token for abdullah
+
+
+  // 5EDD6908CEE7B723598229D2BE9DA03A01DB435B0D311B2D65B0610084E76822EFF80011ECCBAE291C91412ED3CDF1DB --> secure test API
+  // 8e7212e0-fd27-4e45-b9de-c2d05cdc9f22  --> secure SMTP server for dev
