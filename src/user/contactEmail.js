@@ -14,10 +14,10 @@ const submit = document.getElementsByClassName("form-contact")[0];
 //triggers when form submitted
 submit.addEventListener("submit", (e) => {
     e.preventDefault();
-    console.log("email form triggered");
+    console.log("Message Sending...");
 
     //creating the email body:
-    let emailBody = `
+    const emailBody = `
     Name:  
     ${username.value} 
     <br> Email: 
@@ -31,14 +31,18 @@ submit.addEventListener("submit", (e) => {
     //sends email:
     Email.send({
         SecureToken: "3a9c6519-6fbc-46bd-919e-7e0ad0bbe1ed",
-        To: "mississaugachessclub@gmail.com",
+        To: "abdullahaviator13@gmail.com",
         From: email.value,
-        Subject: "Contact Form From MCC Website Client",
-        Body: emailBody
+        Subject: " A Client from the Mississauga Chess Club Website is trying to Reach Us!",
+        Body: emailBody,
     })
         .then((response) => {
             alert("Message has been Sent Succesfully");
-            console.log(response);
+            console.log("Message has been sent", response, response.message);
+        })
+        .catch((error) => {
+            alert("Error, We could not reach the server to send the message, please try again later");
+            console.log(`Message Could Not be sent and here is why --> ${error.message, error} `)
         })
 
 });
