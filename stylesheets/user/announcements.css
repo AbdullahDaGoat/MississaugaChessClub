@@ -68,7 +68,7 @@ section .leftBox .content {
 }
 
 section .leftBox .content:hover {
-  background-color: red;
+  background-color: #313866;
 }
 
 section .leftBox .content h1 {
@@ -133,7 +133,7 @@ section .events ul li .time {
 }
 
 section .events ul li:hover .time {
-  background-color: red;
+  background-color: #313866;
 }
 
 section .events ul li .time h2 {
@@ -178,7 +178,7 @@ section .events ul li .details a {
 }
 
 section .events ul li .details a:hover {
-  background-color: red;
+  background-color: #313866;
   color: #fff;
-  border-color: red;
+  border-color: #313866;
 }
