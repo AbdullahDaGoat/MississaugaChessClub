@@ -135,10 +135,19 @@ if (window.innerWidth <= 768) {
               </a>
             </li>
             <li class="list">
-              <a href="https://www.chesskid.com" class="nav-link nav-link-3" >
+              <a href="#" class="nav-link nav-link-3" onclick="showConfirmation()">
                 <i class="bx bxs-baby-carriage icon"></i>
                 <span class="link">Chess for Kids</span>
               </a>
+              
+              <script async>
+              function showConfirmation() {
+                var confirmation = confirm("Are you sure you want to be redirected to Chess for Kids?");
+                if (confirmation) {
+                  window.location.href = "https://www.chesskid.com";
+                }
+              }
+              </script>
             </li>
             <li class="list">
               <a href="links.html" class="nav-link nav-link-4">
@@ -185,10 +194,6 @@ if (window.innerWidth <= 768) {
       </article>
    
    
-  
-
-    <!-- Content -->
- 
 
     <!-- Footer that has everything -->
 </body>
