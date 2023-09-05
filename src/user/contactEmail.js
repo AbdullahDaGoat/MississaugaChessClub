@@ -30,10 +30,9 @@ submit.addEventListener("submit", (e) => {
 
     //sends email:
     Email.send({
-        // SecureToken: "3a9c6519-6fbc-46bd-919e-7e0ad0bbe1ed", --> Real (no work)
-        SecureToken: "8e7212e0-fd27-4e45-b9de-c2d05cdc9f22 ",
+        SecureToken: "9e6bc025-59ae-4ba8-93b6-526704669bde",
         To: "abdullahaviator13@gmail.com",
-        From: email.value,
+        From: "website.mississaugachessclubcanada@mail.com",
         Subject: " A Client from the Mississauga Chess Club Website is trying to Reach Us!",
         Body: emailBody,
     })
