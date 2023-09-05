@@ -33,12 +33,12 @@ submit.addEventListener("submit", (e) => {
         SecureToken: "9e6bc025-59ae-4ba8-93b6-526704669bde",
         To: "abdullahaviator13@gmail.com",
         From: "website.mississaugachessclubcanada@mail.com",
-        Subject: " A Client from the Mississauga Chess Club Website is trying to Reach Us!",
-        Body: emailBody,
+        Subject: ` ${username.value} from the Mississauga Chess Club Website has a concern!`,
     })
         .then((response) => {
             alert("Message has been Sent Succesfully");
-            console.log("Message has been sent", response, response.message);
+            console.log("Message has been sent", response, response.message, response.status, );
+            e.target.reset()
         })
         .catch((error) => {
             alert("Error, We could not reach the server to send the message, please try again later");
