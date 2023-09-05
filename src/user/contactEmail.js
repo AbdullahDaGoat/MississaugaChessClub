@@ -33,7 +33,8 @@ submit.addEventListener("submit", (e) => {
         SecureToken: "9e6bc025-59ae-4ba8-93b6-526704669bde",
         To: "abdullahaviator13@gmail.com",
         From: "website.mississaugachessclubcanada@mail.com",
-        Subject: ` ${username.value} from the Mississauga Chess Club Website has a concern!`,
+        Subject: ` ${username.value} from the Mississauga Chess Club Website has a Concern!`,
+        Body: emailBody,
     })
         .then((response) => {
             alert("Message has been Sent Succesfully");
