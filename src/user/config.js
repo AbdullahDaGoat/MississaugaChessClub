@@ -2,16 +2,16 @@ const config = {
     passcode: '1444MCC$'
   };
   
-
-   // Access code to Email: 049315
-  //  6D55ECB75332D0EB0649EF991655BEBFF249 --> SMTP server
-  // C3B2950ECCB093A14DE850657B2CA054A0EEE62FCF7C5B6A7B95BF5BA9526F2B74590E2819B64A2574548B3A99CC8997 --> SMTP API
-  // 3a9c6519-6fbc-46bd-919e-7e0ad0bbe1ed --> secure token for mcc
+// Access code to Email: 615135
+// API --> 41B2A75175B21E8FCE8E808536D8CEE62F82
 
 
-  // D3252AB9D9CA5DC868512E3D18B8B989162C --> secure test server for abdullah
-  // cfbd09c8-b805-461f-9dea-e8f8270b1088 --> secure test token for abdullah
 
 
-  // 5EDD6908CEE7B723598229D2BE9DA03A01DB435B0D311B2D65B0610084E76822EFF80011ECCBAE291C91412ED3CDF1DB --> secure test API
-  // 8e7212e0-fd27-4e45-b9de-c2d05cdc9f22  --> secure SMTP server for dev
+
+
+
+
+
+
+
