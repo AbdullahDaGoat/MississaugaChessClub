@@ -40,27 +40,755 @@ const months = [
 
 const eventsArr = [
   {
-    day: 28,
-    month: 6,
+    day: 11,
+    month: 9,
     year: 2023,
     events: [
       {
         // Event Name
-        title: "Some Chess Event", 
+        title: "MCC Junior Tournament #10 Rd 3",
         // Time
-        time: "10:00 AM",
+        time: "6:30 PM",
         // reoccuring: false, (Phase two)
       },
+    ],
+  },
+
+  {
+    day: 13,
+    month: 9,
+    year: 2023,
+    events: [
       {
-        title: "Event 2",
-        time: "11:00 AM",
-        // reoccuring: true, (Phase two)
+        // Event Name
+        title: "Mississauga Chess Club Championship Rd 3",
+        // Time
+        time: "6:30 PM",
+        // reoccuring: false, (Phase two)
+      },
+    ],
+  },
+
+  {
+    day: 15,
+    month: 9,
+    year: 2023,
+    events: [
+      {
+        // Event Name
+        title: "Friday Junior Tournament #2 Rd 3",
+        // Time
+        time: "6:30 PM",
+        // reoccuring: false, (Phase two)
+      },
+    ],
+  },
+
+  {
+    day: 18,
+    month: 9,
+    year: 2023,
+    events: [
+      {
+        // Event Name
+        title: "MCC Junior Tournament #10 Rd 4",
+        // Time
+        time: "6:30 PM",
+        // reoccuring: false, (Phase two)
+      },
+    ],
+  },
+
+  {
+    day: 20,
+    month: 9,
+    year: 2023,
+    events: [
+      {
+        // Event Name
+        title: "Mississauga Chess Club Championship Rd 4",
+        // Time
+        time: "6:30 PM",
+        // reoccuring: false, (Phase two)
+      },
+    ],
+  },
+
+  {
+    day: 22,
+    month: 9,
+    year: 2023,
+    events: [
+      {
+        // Event Name
+        title: "Friday Junior Tournament #2 Rd 4",
+        // Time
+        time: "6:30 PM",
+        // reoccuring: false, (Phase two)
+      },
+    ],
+  },
+
+  {
+    day: 25,
+    month: 9,
+    year: 2023,
+    events: [
+      {
+        // Event Name
+        title: "MCC Junior Tournament #10 Rd 5",
+        // Time
+        time: "6:30 PM",
+        // reoccuring: false, (Phase two)
+      },
+    ],
+  },
+
+  {
+    day: 27,
+    month: 9,
+    year: 2023,
+    events: [
+      {
+        // Event Name
+        title: "Mississauga Chess Club Championship Rd 5",
+        // Time
+        time: "6:30 PM",
+        // reoccuring: false, (Phase two)
+      },
+    ],
+  },
+
+  {
+    day: 29,
+    month: 9,
+    year: 2023,
+    events: [
+      {
+        // Event Name
+        title: "Friday Junior Tournament #2 Rd 5",
+        // Time
+        time: "6:30 PM",
+        // reoccuring: false, (Phase two)
+      },
+    ],
+  },
+
+  {
+    day: 2,
+    month: 10,
+    year: 2023,
+    events: [
+      {
+        // Event Name
+        title: "MCC Junior Tournament #10 Rd 6",
+        // Time
+        time: "6:30 PM",
+        // reoccuring: false, (Phase two)
+      },
+    ],
+  },
+
+  {
+    day: 4,
+    month: 10,
+    year: 2023,
+    events: [
+      {
+        // Event Name
+        title: "Mississauga Chess Club Championship Rd 6",
+        // Time
+        time: "6:30 PM",
+        // reoccuring: false, (Phase two)
+      },
+    ],
+  },
+
+  {
+    day: 6,
+    month: 10,
+    year: 2023,
+    events: [
+      {
+        // Event Name
+        title: "Friday Junior Tournament #2 Rd 6",
+        // Time
+        time: "6:30 PM",
+        // reoccuring: false, (Phase two)
+      },
+    ],
+  },
+
+  {
+    day: 9,
+    month: 10,
+    year: 2023,
+    events: [
+      {
+        // Event Name
+        title: "Closed - Thanksgiving Day",
+        // Time
+        time: "",
+        // reoccuring: false, (Phase two)
+      },
+    ],
+  },
+
+  {
+    day: 11,
+    month: 10,
+    year: 2023,
+    events: [
+      {
+        // Event Name
+        title: "October Active Rd 1 & 2",
+        // Time
+        time: "6:30 PM",
+        // reoccuring: false, (Phase two)
+      },
+    ],
+  },
+
+  {
+    day: 13,
+    month: 10,
+    year: 2023,
+    events: [
+      {
+        // Event Name
+        title: "October Blitz Tournament Rd 1 - 6",
+        // Time
+        time: "6:30 PM",
+        // reoccuring: false, (Phase two)
+      },
+    ],
+  },
+
+  {
+    day: 16,
+    month: 10,
+    year: 2023,
+    events: [
+      {
+        // Event Name
+        title: "Medals, Chess Puzzles, Doubles",
+        // Time
+        time: "6:30 PM",
+        // reoccuring: false, (Phase two)
+      },
+    ],
+  },
+
+  {
+    day: 18,
+    month: 10,
+    year: 2023,
+    events: [
+      {
+        // Event Name
+        title: "October Active Rd 3 & 4",
+        // Time
+        time: "6:30 PM",
+        // reoccuring: false, (Phase two)
+      },
+    ],
+  },
+
+  {
+    day: 20,
+    month: 10,
+    year: 2023,
+    events: [
+      {
+        // Event Name
+        title: "Friday Junior Tournament #3 Rd 1",
+        // Time
+        time: "6:30 PM",
+        // reoccuring: false, (Phase two)
+      },
+    ],
+  },
+
+  {
+    day: 23,
+    month: 10,
+    year: 2023,
+    events: [
+      {
+        // Event Name
+        title: "MCC Junior Tournament #11 Rd 1",
+        // Time
+        time: "6:30 PM",
+        // reoccuring: false, (Phase two)
+      },
+    ],
+  },
+
+  {
+    day: 25,
+    month: 10,
+    year: 2023,
+    events: [
+      {
+        // Event Name
+        title: "October Active Rd 5 & 6",
+        // Time
+        time: "6:30 PM",
+        // reoccuring: false, (Phase two)
+      },
+    ],
+  },
+
+  {
+    day: 27,
+    month: 10,
+    year: 2023,
+    events: [
+      {
+        // Event Name
+        title: "Friday Junior Tournament #3 Rd 2",
+        // Time
+        time: "6:30 PM",
+        // reoccuring: false, (Phase two)
+      },
+    ],
+  },
+
+  {
+    day: 30,
+    month: 10,
+    year: 2023,
+    events: [
+      {
+        // Event Name
+        title: "MCC Junior Tournament #11 Rd 2",
+        // Time
+        time: "6:30 PM",
+        // reoccuring: false, (Phase two)
+      },
+    ],
+  },
+
+  {
+    day: 1,
+    month: 11,
+    year: 2023,
+    events: [
+      {
+        // Event Name
+        title: "Fall Classic Rd 1",
+        // Time
+        time: "6:30 PM",
+        // reoccuring: false, (Phase two)
+      },
+    ],
+  },
+
+  {
+    day: 3,
+    month: 11,
+    year: 2023,
+    events: [
+      {
+        // Event Name
+        title: "Friday Junior Tournament #3 Rd 3",
+        // Time
+        time: "6:30 PM",
+        // reoccuring: false, (Phase two)
+      },
+    ],
+  },
+
+  {
+    day: 6,
+    month: 11,
+    year: 2023,
+    events: [
+      {
+        // Event Name
+        title: "MCC Junior Tournament #11 Rd 3",
+        // Time
+        time: "6:30 PM",
+        // reoccuring: false, (Phase two)
+      },
+    ],
+  },
+
+  {
+    day: 8,
+    month: 11,
+    year: 2023,
+    events: [
+      {
+        // Event Name
+        title: "Fall Classic Rd 2",
+        // Time
+        time: "6:30 PM",
+        // reoccuring: false, (Phase two)
+      },
+    ],
+  },
+
+  {
+    day: 10,
+    month: 11,
+    year: 2023,
+    events: [
+      {
+        // Event Name
+        title: "Friday Junior Tournament #3 Rd 4",
+        // Time
+        time: "6:30 PM",
+        // reoccuring: false, (Phase two)
+      },
+    ],
+  },
+
+  {
+    day: 13,
+    month: 11,
+    year: 2023,
+    events: [
+      {
+        // Event Name
+        title: "MCC Junior Tournament #11 Rd 4",
+        // Time
+        time: "6:30 PM",
+        // reoccuring: false, (Phase two)
+      },
+    ],
+  },
+
+  {
+    day: 15,
+    month: 11,
+    year: 2023,
+    events: [
+      {
+        // Event Name
+        title: "Fall Classic Rd 3",
+        // Time
+        time: "6:30 PM",
+        // reoccuring: false, (Phase two)
+      },
+    ],
+  },
+
+  {
+    day: 17,
+    month: 11,
+    year: 2023,
+    events: [
+      {
+        // Event Name
+        title: "Friday Junior Tournament #3 Rd 5",
+        // Time
+        time: "6:30 PM",
+        // reoccuring: false, (Phase two)
+      },
+    ],
+  },
+
+  {
+    day: 20,
+    month: 11,
+    year: 2023,
+    events: [
+      {
+        // Event Name
+        title: "MCC Junior Tournament #11 Rd 5",
+        // Time
+        time: "6:30 PM",
+        // reoccuring: false, (Phase two)
+      },
+    ],
+  },
+
+  {
+    day: 22,
+    month: 11,
+    year: 2023,
+    events: [
+      {
+        // Event Name
+        title: "Fall Classic Rd 4",
+        // Time
+        time: "6:30 PM",
+        // reoccuring: false, (Phase two)
+      },
+    ],
+  },
+
+  {
+    day: 24,
+    month: 11,
+    year: 2023,
+    events: [
+      {
+        // Event Name
+        title: "Friday Junior Tournament #3 Rd 6",
+        // Time
+        time: "6:30 PM",
+        // reoccuring: false, (Phase two)
+      },
+    ],
+  },
+
+  {
+    day: 27,
+    month: 11,
+    year: 2023,
+    events: [
+      {
+        // Event Name
+        title: "MCC Junior Tournament #11 Rd 6",
+        // Time
+        time: "6:30 PM",
+        // reoccuring: false, (Phase two)
+      },
+    ],
+  },
+
+  {
+    day: 29,
+    month: 11,
+    year: 2023,
+    events: [
+      {
+        // Event Name
+        title: "Fall Classic Rd 5",
+        // Time
+        time: "6:30 PM",
+        // reoccuring: false, (Phase two)
+      },
+    ],
+  },
+
+  {
+    day: 1,
+    month: 12,
+    year: 2023,
+    events: [
+      {
+        // Event Name
+        title: "Christmas Party & Simuls",
+        // Time
+        time: "6:30 PM",
+        // reoccuring: false, (Phase two)
+      },
+    ],
+  },
+
+  {
+    day: 4,
+    month: 12,
+    year: 2023,
+    events: [
+      {
+        // Event Name
+        title: "Christmas Party & Simuls",
+        // Time
+        time: "6:30 PM",
+        // reoccuring: false, (Phase two)
+      },
+    ],
+  },
+
+  {
+    day: 6,
+    month: 12,
+    year: 2023,
+    events: [
+      {
+        // Event Name
+        title: "Christmas Party & Simuls",
+        // Time
+        time: "6:30 PM",
+        // reoccuring: false, (Phase two)
+      },
+    ],
+  },
+
+  {
+    day: 8,
+    month: 12,
+    year: 2023,
+    events: [
+      {
+        // Event Name
+        title: "Annual General Meeting",
+        // Time
+        time: "",
+        // reoccuring: false, (Phase two)
+      },
+    ],
+  },
+
+  {
+    day: 11,
+    month: 12,
+    year: 2023,
+    events: [
+      {
+        // Event Name
+        title: "Closed - Christmas",
+        // Time
+        time: "",
+        // reoccuring: false, (Phase two)
+      },
+    ],
+  },
+
+  {
+    day: 13,
+    month: 12,
+    year: 2023,
+    events: [
+      {
+        // Event Name
+        title: "Annual General Meeting",
+        // Time
+        time: "",
+        // reoccuring: false, (Phase two)
+      },
+    ],
+  },
+
+  {
+    day: 15,
+    month: 12,
+    year: 2023,
+    events: [
+      {
+        // Event Name
+        title: "Closed - Christmas",
+        // Time
+        time: "",
+        // reoccuring: false, (Phase two)
+      },
+    ],
+  },
+
+  {
+    day: 18,
+    month: 12,
+    year: 2023,
+    events: [
+      {
+        // Event Name
+        title: "Closed - Christmas",
+        // Time
+        time: "",
+        // reoccuring: false, (Phase two)
+      },
+    ],
+  },
+
+  {
+    day: 20,
+    month: 12,
+    year: 2023,
+    events: [
+      {
+        // Event Name
+        title: "Closed - Christmas",
+        // Time
+        time: "",
+        // reoccuring: false, (Phase two)
+      },
+    ],
+  },
+
+  {
+    day: 22,
+    month: 12,
+    year: 2023,
+    events: [
+      {
+        // Event Name
+        title: "Closed - Christmas",
+        // Time
+        time: "",
+        // reoccuring: false, (Phase two)
+      },
+    ],
+  },
+
+  {
+    day: 25,
+    month: 12,
+    year: 2023,
+    events: [
+      {
+        // Event Name
+        title: "Closed - Christmas",
+        // Time
+        time: "",
+        // reoccuring: false, (Phase two)
+      },
+    ],
+  },
+
+  {
+    day: 27,
+    month: 12,
+    year: 2023,
+    events: [
+      {
+        // Event Name
+        title: "Closed - Christmas",
+        // Time
+        time: "",
+        // reoccuring: false, (Phase two)
+      },
+    ],
+  },
+
+  {
+    day: 29,
+    month: 12,
+    year: 2023,
+    events: [
+      {
+        // Event Name
+        title: "Closed - Christmas",
+        // Time
+        time: "",
+        // reoccuring: false, (Phase two)
+      },
+    ],
+  },
+
+  {
+    day: 1,
+    month: 1,
+    year: 2024,
+    events: [
+      {
+        // Event Name
+        title: "Closed - Christmas",
+        // Time
+        time: "",
+        // reoccuring: false, (Phase two)
+      },
+    ],
+  },
+
+  {
+    day: 3,
+    month: 1,
+    year: 2024,
+    events: [
+      {
+        // Event Name
+        title: "Closed for Christmas",
+        // Time
+        time: "",
+        // reoccuring: false, (Phase two)
       },
     ],
   },
 ];
-
-
 
 getEvents();
 console.log("This is the Events Array: ", eventsArr);
@@ -76,7 +804,6 @@ window.addEventListener("load", () => {
   getEvents();
   console.log("This is the Events Array: ", eventsArr);
 });
-
 
 //function to add days in days with class day and prev-date next-date on previous month and next month days and active on today
 function initCalendar() {
@@ -99,9 +826,13 @@ function initCalendar() {
   for (let i = 1; i <= lastDate; i++) {
     let eventPresent = false; // Flag to check if event is present on the day
     const currentDate = new Date(year, month, i); // Create a Date object for the current day
-  
+
     eventsArr.forEach((eventObj) => {
-      const eventDate = new Date(eventObj.year, eventObj.month - 1, eventObj.day); // Create a Date object for the event day
+      const eventDate = new Date(
+        eventObj.year,
+        eventObj.month - 1,
+        eventObj.day
+      ); // Create a Date object for the event day
       if (currentDate.getTime() === eventDate.getTime()) {
         eventPresent = true;
       }
@@ -127,7 +858,6 @@ function initCalendar() {
       }
     }
   }
-  
 
   for (let j = 1; j <= nextDays; j++) {
     days += `<div class="day next-date">${j}</div>`;
@@ -311,7 +1041,6 @@ addEventTitle.addEventListener("input", (e) => {
   addEventTitle.value = addEventTitle.value.slice(0, 60);
 });
 
-
 //allow only time in eventtime from and to
 addEventFrom.addEventListener("input", (e) => {
   addEventFrom.value = addEventFrom.value.replace(/[^0-9:]/g, "");
@@ -460,7 +1189,6 @@ function saveEvents() {
   localStorage.setItem("events", JSON.stringify(eventsArr));
 }
 
-
 //function to get events from local storage
 function getEvents() {
   //check if events are already saved in local storage then return event else nothing
@@ -470,7 +1198,6 @@ function getEvents() {
   const events = JSON.parse(localStorage.getItem("events"));
   eventsArr.push(...events);
 }
-
 
 function convertTime(time) {
   //convert time to 24 hour format
@@ -483,8 +1210,8 @@ function convertTime(time) {
   return time;
 }
 
-const modal = document.querySelector(".modal")
-const closeModal = document.querySelector(".close-button")
+const modal = document.querySelector(".modal");
+const closeModal = document.querySelector(".close-button");
 document.addEventListener("load", () => {
-  modal.showModal()
-})
+  modal.showModal();
+});
