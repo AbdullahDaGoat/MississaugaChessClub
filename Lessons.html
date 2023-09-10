@@ -21,21 +21,11 @@
     <script>
       // Redirect function
         function redirectToIndex() {
+          alert("this page is under constrcution and is not ready for public use yet.")
+          alert("Redirecting to index page...")
           window.location.href = "index.html";
         }
-
-        // Check if the current page is the index page
-        if (window.location.pathname === "/index.html") {
-          // Display the redirection success message
-          document.addEventListener("DOMContentLoaded", function () {
-            var message = document.createElement("p");
-            message.textContent = "Redirection successful. The current page is still being constructed.";
-            document.body.appendChild(message);
-          });
-        } else {
-          // Redirect to the index page
-          redirectToIndex();
-        }
+        redirectToIndex()
     </script>
 </head>
 <body>
